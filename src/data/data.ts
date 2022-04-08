@@ -7,7 +7,8 @@ export const links: HeaderLinkProps[] = [
         label: "Skills",
         route: "",
         anker: "skills",
-        routeToShow: ["/ ", "/home"],
+        routeToShow: ["/", "/home"],
+        highlight: false,
     },
     { label: "Projects", route: "/projects", anker: "" },
     {

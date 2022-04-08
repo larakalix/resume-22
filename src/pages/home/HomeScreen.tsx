@@ -1,6 +1,6 @@
 import { LetsTalkButton } from "../../components/generic/LetsTalkButton";
-import { Title } from "../../components/generic/Title";
 import { Banner } from "../../components/home/Banner";
+import { Skills } from "../../components/home/Skills";
 
 export const HomeScreen = () => {
     return (
@@ -17,9 +17,9 @@ export const HomeScreen = () => {
             </div>
             <div
                 id="skills"
-                className="h-screen flex items-center justify-center flex-col"
+                className="min-h-screen flex items-center justify-center flex-col"
             >
-                <Title title="Skills" inverted={false} />
+                <Skills />
             </div>
         </>
     );
