@@ -4,7 +4,7 @@ import { Footer, Header } from "../src/components";
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
-        <div className="bg-gray-100">
+        <div className="bg-gray-100 scroll-smooth">
             <Header />
             <main>
                 <Component {...pageProps} />
