@@ -1,11 +1,26 @@
-import { Title } from "../../components/home/Title";
+import { LetsTalkButton } from "../../components/generic/LetsTalkButton";
+import { Title } from "../../components/generic/Title";
+import { Banner } from "../../components/home/Banner";
 
-const HomeScreen = () => {
+export const HomeScreen = () => {
     return (
-        <div className="h-screen flex items-center justify-center flex-col">
-            <Title />
-        </div>
+        <>
+            <div
+                id="Welcome"
+                className="h-screen flex items-center justify-center flex-col"
+            >
+                <Banner />
+
+                <div className="mt-12">
+                    <LetsTalkButton inverted />
+                </div>
+            </div>
+            <div
+                id="skills"
+                className="h-screen flex items-center justify-center flex-col"
+            >
+                <Title title="Skills" inverted={false} />
+            </div>
+        </>
     );
 };
-
-export default HomeScreen;
