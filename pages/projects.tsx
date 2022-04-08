@@ -1,13 +1,13 @@
 import type { NextPage } from "next";
 import ContactWrap from "../src/components/generic/ContactWrap";
-import { HomeScreen } from "../src/pages";
+import { ProjectsScreen } from "../src/pages/projects/ProjectsScreen";
 
-const Home: NextPage = () => {
+const Projects: NextPage = () => {
     return (
         <ContactWrap>
-            <HomeScreen />
+            <ProjectsScreen />
         </ContactWrap>
     );
 };
 
-export default Home;
+export default Projects;
