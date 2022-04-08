@@ -8,18 +8,18 @@ export const Skills = () => {
         <div className="w-full p-12 m-auto flex justify-center items-center flex-col">
             <Title title="Skills" inverted={false} className="mb-12" />
 
-            <div className="grid grid-cols-2 max-w-[80vw]">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 max-w-[100vw] md:max-w-[80vw]">
                 {skills.map(({ title, description }: SkillsProps) => (
                     <div
                         key={title}
                         className="flex justify-start items-center flex-col p-6"
                     >
-                        <h1 className="uppercase text-6xl font-bold w-full">
+                        <h1 className="uppercase text-5xl md:text-6xl font-bold w-full text-center md:text-left">
                             {title}
                         </h1>
                         <Paragraph
                             text={description}
-                            className="w-full mt-4 pr-8"
+                            className="w-full mt-4 pr-0 md:pr-8"
                         />
                     </div>
                 ))}

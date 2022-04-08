@@ -9,7 +9,7 @@ export const LetsTalkButton = ({ inverted, justMail = false }: Props) => {
     const styles = clsx({
         ["text-white bg-black"]: inverted && !justMail,
         ["text-black bg-white"]: !inverted && !justMail,
-        ["bg-transparent text-white text-[5rem] font-bold"]: justMail === true,
+        ["bg-transparent text-white text-[2.5rem] md:text-[5rem] font-bold"]: justMail === true,
     });
 
     return (
