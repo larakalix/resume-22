@@ -1,4 +1,7 @@
 import { Title } from "../../components/generic/Title";
+import { Project } from "../../components/projects/Project";
+import { projects } from "../../data/data";
+import { ProjectProps } from "../../interfaces/Projects";
 
 export const ProjectsScreen = () => {
     return (
@@ -9,13 +12,8 @@ export const ProjectsScreen = () => {
             <Title title="Projects" inverted={false} className="mb-[4rem]" />
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 w-full">
-                {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-                    <div
-                        key={item}
-                        className="w-full h-[20rem] flex justify-center items-center bg-red-100 rounded"
-                    >
-                        {item}
-                    </div>
+                {projects.map(({ id, ...props }: ProjectProps) => (
+                    <Project key={id} {...{ id, ...props }} />
                 ))}
             </div>
         </div>

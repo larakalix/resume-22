@@ -1,5 +1,4 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import Link from "next/link";
 import { useRouter } from "next/router";
 import clsx from "clsx";
 import { HeaderLinkProps } from "../../interfaces/HeaderLinkProps";
@@ -9,9 +8,11 @@ export const HeaderLink = ({
     route,
     label,
     routeToShow,
+    mobileClick,
     highlight = false,
+    isOnMobile = false,
 }: HeaderLinkProps) => {
-    const { pathname } = useRouter();
+    const { pathname, push } = useRouter();
 
     const styles = clsx({
         ["bg-black text-white mx-2"]: pathname === route,
@@ -24,17 +25,20 @@ export const HeaderLink = ({
 
     if (anker && !routeToShow?.includes(pathname)) return null;
 
+    const handleClick = (value: boolean) => {
+        if (isOnMobile && !!mobileClick) mobileClick(false);
+        if (!anker && route) push(route);
+    };
+
     return (
         <li className="font-montserrat font-bold">
-            <Link href={anker ? `#${anker}` : route}>
-                <a
-                    className={`${
-                        highlight ? hlStyles : styles
-                    } px-4 py-2 rounded`}
-                >
-                    {label}
-                </a>
-            </Link>
+            <a
+                href={anker ? `#${anker}` : "#!"}
+                className={`${highlight ? hlStyles : styles} px-4 py-2 rounded`}
+                onClick={() => handleClick(false)}
+            >
+                {label}
+            </a>
         </li>
     );
 };

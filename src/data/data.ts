@@ -1,4 +1,5 @@
 import { HeaderLinkProps } from "../interfaces/HeaderLinkProps";
+import { ProjectProps } from "../interfaces/Projects";
 import { SkillsProps } from "../interfaces/SkillsProps";
 
 export const links: HeaderLinkProps[] = [
@@ -52,4 +53,11 @@ export const skills: SkillsProps[] = [
         description:
             "Apps update, building, and scaling with automated infrastructures like DigitalOcean, Azure DevOps, Vercel or Netlify for reduce depoyment times.",
     },
+];
+
+export const projects: ProjectProps[] = [
+    { id: "74283748374", name: "Blog with DatoCMS" },
+    { id: "745757567vf", name: "Guess the Pokemon - Card Game" },
+    { id: "grg5gg5e455", name: "Ecommerce Store" },
+    { id: "4y6gdfgdfth", name: "Facebook Clone" },
 ];
