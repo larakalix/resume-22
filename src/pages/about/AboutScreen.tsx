@@ -5,11 +5,11 @@ export const AboutScreen = () => {
     return (
         <div
             id="about"
-            className="h-screen flex items-center justify-center flex-col p-8 m-auto md:max-w-5xl lg:max-w-7xl"
+            className="min-h-screen flex items-center justify-center flex-col p-8 m-auto md:max-w-5xl lg:max-w-7xl"
         >
-            <Title title="My brief" inverted={false} className="mb-[4rem]" />
+            <Title title="My approach" inverted={false} className="mb-[4rem]" />
 
-            <div>
+            <div className="max-w-5xl">
                 <Paragraph
                     text="I'm a web developer, specialized in back end with ASP.NET
                 Core, and front end with Angular and ReactJS. I've been
