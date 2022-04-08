@@ -18,7 +18,7 @@ export const HeaderLink = ({
     });
 
     const hlStyles = clsx({
-        ["bg-[#206ee9] text-white"]: highlight,
+        ["bg-blue-500 text-white"]: highlight,
     });
 
     if (anker && !routeToShow?.includes(pathname)) return null;
