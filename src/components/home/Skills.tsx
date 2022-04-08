@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Paragraph } from "../generic/Paragraph";
 import { Title } from "../generic/Title";
 import { SkillsProps } from "../../interfaces/SkillsProps";
@@ -10,9 +11,13 @@ export const Skills = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 max-w-[100vw] md:max-w-[80vw]">
                 {skills.map(({ title, description }: SkillsProps) => (
-                    <div
+                    <motion.div
                         key={title}
                         className="flex justify-start items-center flex-col p-6"
+                        initial={{ padding: "1rem" }}
+                        animate={{
+                            padding: "1.5rem",
+                        }}
                     >
                         <h1 className="uppercase text-5xl md:text-6xl font-bold w-full text-center md:text-left">
                             {title}
@@ -21,7 +26,7 @@ export const Skills = () => {
                             text={description}
                             className="w-full mt-4 pr-0 md:pr-8"
                         />
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </div>

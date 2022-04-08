@@ -1,7 +1,9 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useRouter } from "next/router";
 import clsx from "clsx";
+import { motion } from "framer-motion";
 import { HeaderLinkProps } from "../../interfaces/HeaderLinkProps";
+import { div_config } from "../../configs/FramerMotion";
 
 export const HeaderLink = ({
     anker,
@@ -31,7 +33,7 @@ export const HeaderLink = ({
     };
 
     return (
-        <li className="font-montserrat font-bold">
+        <motion.li className="font-montserrat font-bold" {...div_config}>
             <a
                 href={anker ? `#${anker}` : "#!"}
                 className={`${highlight ? hlStyles : styles} px-4 py-2 rounded`}
@@ -39,6 +41,6 @@ export const HeaderLink = ({
             >
                 {label}
             </a>
-        </li>
+        </motion.li>
     );
 };
