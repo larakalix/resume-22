@@ -1,3 +1,4 @@
+import { Paragraph } from "../generic/Paragraph";
 import { Title } from "../generic/Title";
 
 interface Props {
@@ -41,9 +42,7 @@ export const Skills = () => {
                     <h1 className="uppercase text-6xl font-bold w-full">
                         {title}
                     </h1>
-                    <p className="w-full mb-20 mt-4 text-[2rem] leading-[2.5rem]">
-                        {description}
-                    </p>
+                    <Paragraph text={description} className="w-full mt-4" />
                 </div>
             ))}
         </div>

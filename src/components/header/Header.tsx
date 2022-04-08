@@ -6,8 +6,8 @@ export const Header = () => {
     return (
         <div className="flex items-center justify-between flex-row p-8 md:max-w-5xl lg:max-w-7xl m-auto sticky">
             <Link href="/">
-                <a className="font-bold">
-                    
+                <a className="font-bold text-[2rem] bg-black text-white px-2 rounded">
+                    KTD
                 </a>
             </Link>
             <div>
