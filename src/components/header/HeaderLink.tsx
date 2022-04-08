@@ -12,6 +12,7 @@ export const HeaderLink = ({
     routeToShow,
     mobileClick,
     highlight = false,
+    highlightColor = "",
     isOnMobile = false,
 }: HeaderLinkProps) => {
     const { pathname, push } = useRouter();
