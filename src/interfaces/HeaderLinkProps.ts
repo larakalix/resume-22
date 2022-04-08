@@ -4,6 +4,7 @@ export interface HeaderLinkProps {
     label: string;
     routeToShow?: string[] | undefined;
     highlight?: boolean;
+    highlightColor?: string;
     isOnMobile?: boolean;
     mobileClick: any;
 }
