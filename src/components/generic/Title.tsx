@@ -20,10 +20,10 @@ export const Title = ({
     if (!title && !subtitle) return null;
 
     const styles = clsx({
-        ["font-semibold text-[3.8rem]"]: size === TitleSize.default,
-        ["font-bold text-[4.2rem]"]: size === TitleSize.big,
-        ["font-semibold text-[2.2rem]"]: size === TitleSize.small,
-        ["font-semibold text-[1.2rem]"]: size === TitleSize.extrasmall,
+        ["font-semibold text-[2.8rem] md:text-[3.8rem]"]: size === TitleSize.default,
+        ["font-bold text-[2.4rem] md:text-[4.2rem]"]: size === TitleSize.big,
+        ["font-semibold text-[1rem] md:text-[2.2rem]"]: size === TitleSize.small,
+        ["font-semibold text-[0.8rem] md:text-[1.2rem]"]: size === TitleSize.extrasmall,
     });
 
     const invertedStyles = clsx({

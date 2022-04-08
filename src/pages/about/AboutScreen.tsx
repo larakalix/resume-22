@@ -7,9 +7,13 @@ export const AboutScreen = () => {
             id="about"
             className="min-h-screen flex items-center justify-center flex-col p-8 m-auto md:max-w-5xl lg:max-w-7xl"
         >
-            <Title title="My approach" inverted={false} className="mb-[4rem]" />
+            <Title
+                title="My approach"
+                inverted={false}
+                className="mb-[2rem] md:mb-[4rem]"
+            />
 
-            <div className="max-w-5xl">
+            <div className="max-w-full md:max-w-5xl">
                 <Paragraph
                     text="I'm a web developer, specialized in back end with ASP.NET
                 Core, and front end with Angular and ReactJS. I've been

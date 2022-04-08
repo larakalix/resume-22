@@ -8,7 +8,7 @@ export const ProjectsScreen = () => {
         >
             <Title title="Projects" inverted={false} className="mb-[4rem]" />
 
-            <div className="grid grid-cols-2 gap-4 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 w-full">
                 {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
                     <div
                         key={item}
