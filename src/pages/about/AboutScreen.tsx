@@ -1,11 +1,14 @@
 import { Paragraph } from "../../components/generic/Paragraph";
 import { Title } from "../../components/generic/Title";
+import { motion } from "framer-motion";
+import { div_config } from "../../configs/FramerMotion";
 
 export const AboutScreen = () => {
     return (
-        <div
+        <motion.div
             id="about"
             className="min-h-screen flex items-center justify-center flex-col p-8 m-auto md:max-w-5xl lg:max-w-7xl"
+            {...div_config}
         >
             <Title
                 title="My approach"
@@ -41,6 +44,6 @@ export const AboutScreen = () => {
                 development."
                 />
             </div>
-        </div>
+        </motion.div>
     );
 };
