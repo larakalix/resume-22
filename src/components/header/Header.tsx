@@ -6,9 +6,12 @@ import { DesktopMenu } from "./DesktopMenu";
 import { MobileMenu } from "./MobileMenu";
 import { ThemeSelector } from "./ThemeSelector";
 import ThemeContext from "../../context/ThemeContext";
+import { useDateInfo } from "../../hooks/useDateInfo";
+import Image from "next/image";
 
 export const Header = () => {
     const [show, setShow] = useState(false);
+    const { isXmas } = useDateInfo();
 
     const handleClick = (value: boolean) => {
         setShow(value);
@@ -19,8 +22,13 @@ export const Header = () => {
     return (
         <div className="flex items-center justify-between flex-row p-8 md:max-w-5xl lg:max-w-7xl m-auto sticky">
             <Link href="/">
-                <a className="font-bold text-[2rem] bg-black text-white px-2 rounded dark:bg-white dark:text-black">
+                <a className="font-bold text-[2rem] bg-black text-white px-2 rounded dark:bg-white dark:text-black relative">
                     KTD
+                    {
+                        isXmas() ? <div className="absolute top-[-1.5rem] left-[-1.5rem]">
+                            <Image src="/santa-hat.png" alt="X-Mas" width={56} height={56} />
+                        </div> : null
+                    }
                 </a>
             </Link>
             <div className="flex items-center justify-center">
