@@ -16,7 +16,7 @@ const THEME_OPTIONS: Props[] = [
 
 export const ThemeSelector = () => {
     return (
-        <div className='ml-4'>
+        <div className='ml-4 transition-all'>
             <ul className='flex items-center justify-center bg-black dark:bg-white p-2 rounded-full'>
                 {
                     THEME_OPTIONS.map(({ id, icon }: Props) => (
