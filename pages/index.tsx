@@ -10,7 +10,7 @@ const Home: NextPage = () => {
     return (
         <ContactWrap>
             <Head>
-                <title>Hello stranger, happy { weekDay }!</title>
+                <title>Hello stranger, happy { weekDay() }!</title>
             </Head>
             <HomeScreen />
         </ContactWrap>
