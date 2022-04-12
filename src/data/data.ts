@@ -109,8 +109,11 @@ export const skills: SkillsProps[] = [
 ];
 
 export const projects: ProjectProps[] = [
-    { id: "74283748374", name: "Blog with DatoCMS" },
-    { id: "745757567vf", name: "Guess the Pokemon - Card Game" },
-    { id: "grg5gg5e455", name: "Ecommerce Store" },
-    { id: "4y6gdfgdfth", name: "Facebook Clone" },
+    { id: "74283748374", name: "Blog with DatoCMS", link: '', github: 'https://github.com/larakalix/blog-app' },
+    { id: "745757567vf", name: "Guess the Pokemon - Card Game", link: '', github: 'https://github.com/larakalix/guess-cards-game' },
+    { id: "4y6gdfgdfth", name: "Facebook Clone", link: '', github: 'https://github.com/larakalix/fb-clone-app' },
+    { id: "hgthy56h45h", name: "Hacker News", link: '', github: 'https://github.com/larakalix/reign-app' },
+    { id: "gatsh343423", name: "Old Resume - Gatsby", link: '', github: 'https://github.com/larakalix/resume' },
+    { id: "gatsh343423", name: "Old Resume - Gatsby", link: '', github: 'https://github.com/larakalix/resume' },
+    { id: "grg5gg5e455", name: "Ecommerce Store", link: '' },
 ];
