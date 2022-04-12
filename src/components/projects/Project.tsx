@@ -4,7 +4,7 @@ import { Title } from "../generic/Title";
 import { TitleSize } from "../../interfaces/TitleProps";
 
 export const Project = ({ id, name, github, link }: ProjectProps) => (
-    <div className="w-full h-[20rem] flex justify-center items-center bg-blue-200 rounded flex-col">
+    <div className="w-full h-[20rem] flex justify-center items-center bg-blue-200 dark:bg-purple-300 rounded flex-col">
         <Title title={name} inverted={false} size={TitleSize.extrasmall} />
         <ul className="flex justify-between items-center">
             <li>
