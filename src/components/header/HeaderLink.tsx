@@ -18,8 +18,8 @@ export const HeaderLink = ({
     const { pathname, push } = useRouter();
 
     const styles = clsx({
-        ["bg-black text-white mx-2"]: pathname === route,
-        ["bg-transparent text-black"]: pathname !== route,
+        ["bg-black text-white mx-2 dark:bg-white dark:text-black"]: !isOnMobile && pathname === route,
+        ["bg-transparent text-black dark:text-white"]: !isOnMobile && pathname !== route,
     });
 
     const hlStyles = clsx({

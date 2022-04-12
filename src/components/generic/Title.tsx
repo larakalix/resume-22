@@ -27,8 +27,8 @@ export const Title = ({
     });
 
     const invertedStyles = clsx({
-        ["text-white bg-black"]: inverted,
-        ["text-black bg-transparent"]: !inverted,
+        ["text-white dark:text-black"]: inverted,
+        ["text-black dark:text-white"]: !inverted,
     });
 
     return (
