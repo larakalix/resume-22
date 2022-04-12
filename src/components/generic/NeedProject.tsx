@@ -7,7 +7,7 @@ export const NeedProject = () => {
     return (
         <div
             id="hire"
-            className="flex justify-center items-center h-screen bg-black text-white"
+            className="flex justify-center items-center h-screen bg-black text-white dark:bg-white dark:text-black"
         >
             <div className="py-8 m-auto md:max-w-5xl lg:max-w-7xl">
                 <Title
