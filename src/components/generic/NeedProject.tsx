@@ -9,7 +9,7 @@ export const NeedProject = () => {
             id="hire"
             className="flex justify-center items-center h-screen bg-black text-white"
         >
-            <div className="p-8 m-auto md:max-w-5xl lg:max-w-7xl">
+            <div className="py-8 m-auto md:max-w-5xl lg:max-w-7xl">
                 <Title
                     title="Got a Project? Let's talk!"
                     size={TitleSize.extrasmall}
