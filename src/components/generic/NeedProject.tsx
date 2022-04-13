@@ -1,6 +1,7 @@
 import { social_networks } from "../../data/data";
 import { TitleSize } from "../../interfaces/TitleProps";
 import { LetsTalkButton } from "./LetsTalkButton";
+import { ResumeButton } from "./ResumeButton";
 import { Title } from "./Title";
 
 export const NeedProject = () => {
