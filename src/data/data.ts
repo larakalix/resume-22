@@ -42,16 +42,6 @@ export const links: HeaderLinkProps[] = [
         isOnMobile: false,
         mobileClick: null,
     },
-    // {
-    //     label: "Whatsapp",
-    //     route: "https://wa.me/50589613396",
-    //     anker: "",
-    //     routeToShow: ["/", "/about", "/home", "/projects"],
-    //     highlight: true,
-    //     highlightColor: "#25D366",
-    //     isOnMobile: false,
-    //     mobileClick: null,
-    // },
 ];
 
 export const social_networks: HeaderLinkProps[] = [
