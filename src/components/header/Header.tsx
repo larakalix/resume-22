@@ -1,24 +1,21 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
+import clsx from "clsx";
 import { links } from "../../data/data";
+import { Brand } from "./Brand";
 import { DesktopMenu } from "./DesktopMenu";
 import { MobileMenu } from "./MobileMenu";
 import { ThemeSelector } from "./ThemeSelector";
-import { Brand } from "./Brand";
-import clsx from "clsx";
 
 export const Header = () => {
     const [show, setShow] = useState(false);
     const [hide, setHide] = useState(false);
     const [lastScrollY, setLastScrollY] = useState(0);
 
-    const handleClick = (value: boolean) => {
-        setShow(value);
-    };
+    const handleClick = (value: boolean) => setShow(value);
 
     const controlNavbar = () => {
-        console.log('controlNavbar', lastScrollY)
         if (typeof window !== 'undefined')
             if (window.scrollY > 100)
                 setHide(true);
@@ -40,12 +37,12 @@ export const Header = () => {
     }, [lastScrollY]);
 
     const styles = clsx({
-        ['bg-[rgb(255, 255, 255, .85)] backdrop-blur-sm']: lastScrollY > 100,
+        ['bg-[rgb(255, 255, 255, .85)] backdrop-blur-sm py-4']: lastScrollY > 100,
     });
 
     return (
-        <div className={`w-full sticky top-0 ${hide ? 'opacity-0' : 'opacity-100'} transition-all ${styles}`}>
-            <div className={`flex items-center justify-between flex-row p-8 md:max-w-5xl lg:max-w-7xl m-auto`}>
+        <div className={`w-full sticky top-0 ${hide ? 'opacity-0' : 'opacity-100'} transition-all ${styles} px-8 py-8`}>
+            <div className={`flex items-center justify-between flex-row md:max-w-5xl lg:max-w-7xl m-auto`}>
 
                 <Brand />
 

@@ -1,8 +1,9 @@
-import { LetsTalkButton } from "../../components/generic/LetsTalkButton";
-import { Banner } from "../../components/home/Banner";
-import { Skills } from "../../components/home/Skills";
 import { motion } from "framer-motion";
 import { div_config } from "../../configs/FramerMotion";
+import { Banner } from "../../components/home/Banner";
+import { Skills } from "../../components/home/Skills";
+import { LetsTalkButton } from "../../components/generic/LetsTalkButton";
+import { ResumeButton } from "../../components/generic/ResumeButton";
 
 export const HomeScreen = () => {
     return (
@@ -15,6 +16,7 @@ export const HomeScreen = () => {
 
                 <div className="mt-12">
                     <LetsTalkButton inverted />
+                    {/* <ResumeButton /> */}
                 </div>
             </div>
             <div
