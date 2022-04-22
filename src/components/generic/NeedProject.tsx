@@ -20,9 +20,9 @@ export const NeedProject = () => {
 
                 <LetsTalkButton inverted={false} justMail />
 
-                <ul className="flex flex-row justify-center items-center">
+                <ul className="flex flex-col md:flex-row justify-center items-center">
                     {social_networks.map(({ label, route }) => (
-                        <li key={label} className="px-4">
+                        <li key={label} className="px-4 mb-4 md:mb-0">
                             <a
                                 href={route}
                                 target="_blank"
