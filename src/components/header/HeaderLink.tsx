@@ -16,11 +16,13 @@ export const HeaderLink = ({
     isOnMobile = false,
 }: HeaderLinkProps) => {
     const { pathname, push } = useRouter();
-    const hash = typeof window !== 'undefined' ? window.location.hash : '';
+    const hash = typeof window !== "undefined" ? window.location.hash : "";
 
     const styles = clsx({
-        ["bg-black text-white mx-2 dark:bg-white dark:text-black"]: (!isOnMobile && pathname === route),
-        ["bg-transparent text-black dark:text-white"]: !isOnMobile && pathname !== route,
+        ["bg-black text-white mx-2 dark:bg-white dark:text-black"]:
+            !isOnMobile && pathname === route,
+        ["bg-transparent text-black dark:text-white"]:
+            !isOnMobile && pathname !== route,
     });
 
     const hlStyles = clsx({

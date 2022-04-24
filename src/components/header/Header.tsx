@@ -16,34 +16,37 @@ export const Header = () => {
     const handleClick = (value: boolean) => setShow(value);
 
     const controlNavbar = () => {
-        if (typeof window !== 'undefined')
-            if (window.scrollY > 100)
-                setHide(true);
-            else
-                setHide(false);
+        if (typeof window !== "undefined")
+            if (window.scrollY > 100) setHide(true);
+            else setHide(false);
 
-        if (window.scrollY < lastScrollY)
-            setHide(false);
+        if (window.scrollY < lastScrollY) setHide(false);
 
         setLastScrollY(window.scrollY);
     };
 
     useEffect(() => {
-        if (typeof window !== 'undefined') {
-            window.addEventListener('scroll', controlNavbar);
+        if (typeof window !== "undefined") {
+            window.addEventListener("scroll", controlNavbar);
 
-            return () => window.removeEventListener('scroll', controlNavbar);
+            return () => window.removeEventListener("scroll", controlNavbar);
         }
     }, [lastScrollY]);
 
     const styles = clsx({
-        ['bg-[rgb(255, 255, 255, .85)] backdrop-blur-sm py-4']: lastScrollY > 100,
+        ["bg-[rgb(255, 255, 255, .85)] backdrop-blur-sm py-4"]:
+            lastScrollY > 100,
     });
 
     return (
-        <div className={`w-full sticky top-0 ${hide ? 'opacity-0' : 'opacity-100'} transition-all ${styles} px-8 py-8`}>
-            <div className={`flex items-center justify-between flex-row md:max-w-5xl lg:max-w-7xl m-auto`}>
-
+        <div
+            className={`w-full sticky top-0 ${
+                hide ? "opacity-0" : "opacity-100"
+            } transition-all ${styles} px-8 py-8`}
+        >
+            <div
+                className={`flex items-center justify-between flex-row md:max-w-5xl lg:max-w-7xl m-auto`}
+            >
                 <Brand />
 
                 <div className="flex items-center justify-center">
@@ -58,7 +61,10 @@ export const Header = () => {
                         <DesktopMenu links={links} />
 
                         {show ? (
-                            <MobileMenu handleClick={handleClick} links={links} />
+                            <MobileMenu
+                                handleClick={handleClick}
+                                links={links}
+                            />
                         ) : null}
                     </div>
                     <ThemeSelector />

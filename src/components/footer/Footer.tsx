@@ -3,7 +3,10 @@ export const Footer = () => {
         <div className="text-center pt-4 pb-8">
             <p className="font-semibold text-black dark:text-white">
                 With love by{" "}
-                <a href="https://twitter.com/KalixTheMan" className="font-montserrat font-bold">
+                <a
+                    href="https://twitter.com/KalixTheMan"
+                    className="font-montserrat font-bold"
+                >
                     Ivan Lara 👨‍💻
                 </a>
             </p>
