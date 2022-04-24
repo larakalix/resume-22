@@ -1,5 +1,4 @@
 import clsx from "clsx";
-import { HTMLAttributes } from "react";
 import { TitleSize } from "../../interfaces/TitleProps";
 
 interface Props {
@@ -20,10 +19,14 @@ export const Title = ({
     if (!title && !subtitle) return null;
 
     const styles = clsx({
-        ["font-semibold text-[2.8rem] md:text-[3.8rem] px-2 md:px-[10rem]"]: size === TitleSize.default,
-        ["font-bold text-[2.4rem] md:text-[4.2rem] px-2 md:px-[10rem]"]: size === TitleSize.big,
-        ["font-semibold text-[1rem] md:text-[2.2rem] px-2 md:px-[10rem]"]: size === TitleSize.small,
-        ["font-semibold text-[0.8rem] md:text-[1.2rem] px-2 md:px-[6rem]"]: size === TitleSize.extrasmall,
+        ["font-semibold text-[2.8rem] md:text-[3.8rem] px-2 md:px-[10rem]"]:
+            size === TitleSize.default,
+        ["font-bold text-[2.4rem] md:text-[4.2rem] px-2 md:px-[10rem]"]:
+            size === TitleSize.big,
+        ["font-semibold text-[1rem] md:text-[2.2rem] px-2 md:px-[10rem]"]:
+            size === TitleSize.small,
+        ["font-semibold text-[0.8rem] md:text-[1.2rem] px-2 md:px-[6rem]"]:
+            size === TitleSize.extrasmall,
     });
 
     const invertedStyles = clsx({
@@ -34,13 +37,16 @@ export const Title = ({
     return (
         <>
             <h1
-                className={`font-montserrat md:leading-[3.8rem] ${styles} ${invertedStyles} ${className ?? ""
-                    }`}
+                className={`font-montserrat md:leading-[2.8rem] ${styles} ${invertedStyles} ${
+                    className ?? ""
+                }`}
             >
                 {title}
             </h1>
             {subtitle ?? (
-                <span className={`font-montserrat text-xs font-light italic ${invertedStyles}`}>
+                <span
+                    className={`font-montserrat text-xs font-light italic ${invertedStyles}`}
+                >
                     {subtitle}
                 </span>
             )}
