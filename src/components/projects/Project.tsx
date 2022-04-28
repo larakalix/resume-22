@@ -5,7 +5,7 @@ import { TitleSize } from "../../interfaces/TitleProps";
 
 export const Project = ({ name, github, link }: ProjectProps) => (
     <div className="w-full h-[20rem] flex justify-center items-center bg-blue-200 dark:bg-purple-300 rounded flex-col">
-        <Title title={name} inverted={false} size={TitleSize.small} />
+        <Title title={name} inverted={false} size={TitleSize.small} className="w-full p-0 text-center md:text-[1.4rem] md:px-[0.4rem]" />
         <ul className="flex  justify-between items-center">
             <li className="my-4 md:my-0">
                 <a
