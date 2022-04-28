@@ -101,7 +101,7 @@ export const skills: SkillsProps[] = [
 export const projects: ProjectProps[] = [
     { id: "74283748374", name: "Blog with DatoCMS", link: 'https://blog-app-nine-omega.vercel.app/', github: 'https://github.com/larakalix/blog-app' },
     { id: "745757567vf", name: "Guess the Pokemon - Card Game", link: 'https://guess-the-pokemon-card.netlify.app/', github: 'https://github.com/larakalix/guess-cards-game' },
-    { id: "4112dfgd23h", name: "Instagram Clone", link: 'https://ig-clone-app.vercel.app/', github: 'https://github.com/larakalix/ig-clone-app' },
+    { id: "4112dfgd23h", name: "Instagram Redesign", link: 'https://ig-clone-app.vercel.app/', github: 'https://github.com/larakalix/ig-clone-app' },
     { id: "hgthy56h45h", name: "Hacker News", link: 'https://reign-news-app.netlify.app/', github: 'https://github.com/larakalix/reign-app' },
     { id: "gatsh343423", name: "Old Resume - Gatsby", link: 'https://kalixthedev.netlify.app/', github: 'https://github.com/larakalix/resume' },
     { id: "grg5gg5e455", name: "Ecommerce Store", link: 'https://holivegankitchen.vercel.app/' },
