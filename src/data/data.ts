@@ -79,7 +79,7 @@ export const skills: SkillsProps[] = [
     {
         title: "Frontend",
         description:
-            "Design user interfaces with frameworks/libraries like Angular or ReactJS based on user needs for improve workflows efficiency.",
+            "Design user interfaces with frameworks/libraries like Angular or ReactJS based on user needs to improve workflows efficiency.",
     },
     {
         title: "Backend",
