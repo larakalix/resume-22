@@ -27,9 +27,9 @@ export const AboutScreen = () => {
                 />
 
                 <Paragraph
-                    text="I love coding, I found in this, something I discovered on me, it
-                seems like I can contribute a lot with the people who come to
-                work with me, because one of my skills is being creative. I
+                    text="I have a huge passion on coding, the idea of contribute with user experience
+                is priceless, and I love the way that anyone while coding, could be so creative, and
+                I believe this takes part of my own skillset. I
                 started as a web designer, just making some of visual coding and
                 stylesheets, but since I knew about backend and frontend
                 alternatives, I'm still growing my knowledge about
@@ -37,9 +37,9 @@ export const AboutScreen = () => {
                 />
 
                 <Paragraph
-                    text="So far I have experience in custom applications, ecommerce,
+                    text="In conclusion, I have experience working on custom applications, ecommerce,
                 micro web sites and Rest APIs. I'm open to grab another
-                kind of knowledge respect to another programming languages, I am
+                kind of knowledge respect to another programming languages, I'm
                 an active English student and kind of a lover of web/mobile
                 development."
                 />

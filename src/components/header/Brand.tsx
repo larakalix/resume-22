@@ -7,7 +7,7 @@ export const Brand = () => {
 
     return (
         <Link href="/">
-            <a className="font-bold text-[2rem] bg-black text-white px-2 rounded dark:bg-white dark:text-black relative">
+            <a className="font-bold text-[2rem] bg-black text-white px-2 rounded dark:bg-white dark:text-black relative cursor-default">
                 KTD
                 {isXmas() ? (
                     <div className="absolute top-[-1.5rem] left-[-1.5rem]">

@@ -40,7 +40,7 @@ export const HeaderLink = ({
         <motion.li className="font-montserrat font-bold" {...div_config}>
             <a
                 href={anker ? `#${anker}` : "#!"}
-                className={`${highlight ? hlStyles : styles} px-4 py-2 rounded`}
+                className={`${highlight ? hlStyles : styles} px-4 py-2 rounded cursor-default`}
                 onClick={() => handleClick(false)}
             >
                 {label}
