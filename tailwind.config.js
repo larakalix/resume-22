@@ -9,10 +9,15 @@ module.exports = {
     ],
     theme: {
         fontFamily: {
-            montserrat: ["Montserrat", "sans-serif"],
+            montserrat: ["Inter", "sans-serif"],
         },
-        extend: {},
+        extend: {
+            colors: {
+                "v-blue": "#0070f3",
+                "v-gray": "#696969",
+            },
+        },
     },
     plugins: [],
-    darkMode: 'class',
+    darkMode: "class",
 };
