@@ -19,14 +19,13 @@ export const HeaderLink = ({
     const hash = typeof window !== "undefined" ? window.location.hash : "";
 
     const styles = clsx({
-        ["bg-black text-white mx-2 dark:bg-white dark:text-black"]:
+        ["text-v-blue mx-2 dark:bg-white dark:text-black"]:
             !isOnMobile && pathname === route,
-        ["bg-transparent text-black dark:text-white"]:
-            !isOnMobile && pathname !== route,
+        ["text-v-gray dark:text-white"]: !isOnMobile && pathname !== route,
     });
 
     const hlStyles = clsx({
-        ["bg-blue-500 text-white"]: highlight,
+        ["bg-v-blue text-white"]: highlight,
     });
 
     if (anker && !routeToShow?.includes(pathname)) return null;
@@ -40,7 +39,7 @@ export const HeaderLink = ({
         <motion.li className="font-montserrat font-bold" {...div_config}>
             <a
                 href={anker ? `#${anker}` : "#!"}
-                className={`${highlight ? hlStyles : styles} px-4 py-2 rounded`}
+                className={`${highlight ? hlStyles : styles} font-normal px-4 py-2 rounded`}
                 onClick={() => handleClick(false)}
             >
                 {label}
