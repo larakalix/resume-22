@@ -79,7 +79,7 @@ export const skills: SkillsProps[] = [
     {
         title: "Frontend",
         description:
-            "Design user interfaces with frameworks/libraries like Angular or ReactJS based on user needs for improve workflows efficiency.",
+            "Design user interfaces with frameworks/libraries like Angular or ReactJS based on user needs to improve workflows efficiency.",
     },
     {
         title: "Backend",
@@ -97,6 +97,12 @@ export const skills: SkillsProps[] = [
             "Apps update, building, and scaling with automated infrastructures like DigitalOcean, Azure DevOps, Vercel or Netlify for reduce depoyment times.",
     },
 ];
+
+export const about: string[] = [
+    "React/Angular frontend dev, .net/node js backend dev. I've been working just over 5 years ago with those techs, furthermore, I'm a Microsoft Professional certified in HTML5, CSS3, and JS.",
+    "Moreover, I have a massive passion for coding, the idea of contributing to user experience is priceless, and I love the way that anyone while coding, could be so creative. I believe this takes part of my own skillset. I started as a web designer, just making some visual coding and stylesheets, but since I knew about backend and frontend alternatives, I'm still growing my knowledge about development.",
+    "In conclusion, I have experience working on custom applications, e-commerce, micro websites, and Rest APIs. I'm open to grabbing another kind of knowledge with respect to other programming languages, I'm an active English student and kind of a lover of web/mobile development.",
+]
 
 export const projects: ProjectProps[] = [
     { id: "74283748374", name: "Blog with DatoCMS", link: 'https://blog-app-nine-omega.vercel.app/', github: 'https://github.com/larakalix/blog-app' },

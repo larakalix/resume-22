@@ -36,7 +36,7 @@ const ThemeIcon = ({ id, icon: IconComponent }: Props) => {
 
     return (
         <li
-            className={`${styles} p-1 cursor-pointer rounded-full mx-1`}
+            className={`${styles} p-1 cursor-default rounded-full mx-1`}
             onClick={() => changeTheme(id)}
         >
             <IconComponent />
