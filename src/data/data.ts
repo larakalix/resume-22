@@ -132,7 +132,7 @@ export const projects: ProjectProps[] = [
     {
         id: "hgthy56h45h",
         name: "Styled-components basic factory",
-        link: "https://vitejs-vite-shjus4--3000.local.webcontainer.io/",
+        link: "https://styled-components-factory-ts.vercel.app/",
         github: "https://github.com/larakalix/styled-components-factory-ts",
     },
     {
