@@ -1,6 +1,10 @@
 export interface ProjectProps {
-    id: string;
-    name: string;
+    _createdAt: Date;
+    _id: string;
+    _rev: string;
+    _type: string;
+    _updatedAt: Date;
+    github: string;
     link: string;
-    github?: string;
+    name: string;
 }

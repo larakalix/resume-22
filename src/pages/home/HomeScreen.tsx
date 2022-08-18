@@ -3,8 +3,9 @@ import { div_config } from "../../configs/FramerMotion";
 import { Banner } from "../../components/home/Banner";
 import { Skills } from "../../components/home/Skills";
 import { LetsTalkButton } from "../../components/generic/LetsTalkButton";
+import { HomePageProps } from "../../interfaces/pages/HomeProps";
 
-export const HomeScreen = () => {
+export const HomeScreen = ({ skills }: HomePageProps) => {
     return (
         <motion.div {...div_config}>
             <div
@@ -21,7 +22,7 @@ export const HomeScreen = () => {
                 id="skills"
                 className="min-h-screen flex items-center justify-center flex-col"
             >
-                <Skills />
+                <Skills skills={skills} />
             </div>
         </motion.div>
     );

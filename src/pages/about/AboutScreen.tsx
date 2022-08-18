@@ -2,9 +2,13 @@ import { Paragraph } from "../../components/generic/Paragraph";
 import { Title } from "../../components/generic/Title";
 import { motion } from "framer-motion";
 import { div_config } from "../../configs/FramerMotion";
-import { about } from "../../data/data";
+// import { about } from "../../data/data";
+import { StaticPageContentProps } from "../../interfaces/pages/StaticPageContentProps";
+import { InfoContent } from "../../components/about/InfoContent";
 
-export const AboutScreen = () => {
+export const AboutScreen = ({ content }: StaticPageContentProps) => {
+    const { title, description } = content;
+
     return (
         <motion.div
             id="about"
@@ -12,16 +16,12 @@ export const AboutScreen = () => {
             {...div_config}
         >
             <Title
-                title="My approach"
+                title={title}
                 inverted={false}
                 className="mb-[2rem] md:mb-[4rem]"
             />
 
-            <div className="max-w-full md:max-w-5xl">
-                {about.map((item, index) => (
-                    <Paragraph key={`paragraph-${index}`} text={item} />
-                ))}
-            </div>
+            <InfoContent description={description} />
         </motion.div>
     );
 };
