@@ -1,10 +1,18 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import { Router } from "next/router";
 import { AnimatePresence } from "framer-motion";
+import NProgress from "nprogress";
 import { Footer, Header } from "../src/components";
 import ThemeContext from "../src/context/ThemeContext";
 import useTheme from "../src/hooks/useTheme";
+
+Router.events.on("routeChangeStart", () => NProgress.set(0.5));
+Router.events.on("routeChangeComplete", () => NProgress.done());
+Router.events.on("routeChangeError", () => NProgress.done());
+
+NProgress.configure({ showSpinner: false });
 
 const { Provider } = ThemeContext;
 
@@ -12,10 +20,12 @@ function MyApp({ Component, pageProps }: AppProps) {
     const { theme, changeTheme } = useTheme();
 
     return (
-        <Provider value={{
-            theme,
-            changeTheme,
-        }}>
+        <Provider
+            value={{
+                theme,
+                changeTheme,
+            }}
+        >
             <div className={`${theme}`}>
                 <Head>
                     <link rel="shortcut icon" href="/favicon.png" />
