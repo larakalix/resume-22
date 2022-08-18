@@ -7,7 +7,7 @@ const Projects: NextPage = () => {
     return (
         <ContactWrap>
             <Head>
-                <title>My work</title>
+                <title>My projects</title>
             </Head>
             <ProjectsScreen />
         </ContactWrap>

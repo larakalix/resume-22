@@ -38,7 +38,7 @@ export const HeaderLink = ({
     return (
         <motion.li className="font-montserrat font-bold" {...div_config}>
             <a
-                href={anker ? `#${anker}` : "#!"}
+                href={anker ? `#${anker}` : "javascript:void(0)"}
                 className={`${
                     highlight ? hlStyles : styles
                 } font-normal px-4 py-2 rounded`}
