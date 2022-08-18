@@ -19,7 +19,7 @@ export const Skills = () => {
                             padding: "1.5rem",
                         }}
                     >
-                        <h1 className="uppercase text-5xl md:text-6xl font-bold w-full text-center md:text-left text-black dark:text-white">
+                        <h1 className="uppercase text-[1.8rem] md:text-[3.2rem] font-bold w-full text-center md:text-left text-black dark:text-white">
                             {title}
                         </h1>
                         <Paragraph

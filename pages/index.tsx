@@ -7,10 +7,12 @@ import { HomeScreen } from "../src/pages";
 const Home: NextPage = () => {
     const { weekDay } = useDateInfo();
 
+    const day = weekDay();
+
     return (
         <ContactWrap>
             <Head>
-                <title>Hello stranger, happy { weekDay() }!</title>
+                <title>Hello stranger, happy {day ?? "day"}!</title>
             </Head>
             <HomeScreen />
         </ContactWrap>

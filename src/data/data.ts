@@ -124,7 +124,7 @@ export const projects: ProjectProps[] = [
         github: "https://github.com/larakalix/ig-clone-app",
     },
     {
-        id: "hgthy56h45h",
+        id: "h23hy53h45h",
         name: "Hacker News",
         link: "https://reign-news-app.netlify.app/",
         github: "https://github.com/larakalix/reign-app",
