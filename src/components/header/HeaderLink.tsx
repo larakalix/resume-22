@@ -30,7 +30,7 @@ export const HeaderLink = ({
 
     if (anker && !routeToShow?.includes(pathname)) return null;
 
-    const handleClick = (value: boolean) => {
+    const handleClick = () => {
         if (isOnMobile && !!mobileClick) mobileClick(false);
         if (!anker && route) push(route);
     };
@@ -42,10 +42,7 @@ export const HeaderLink = ({
                 className={`${
                     highlight ? hlStyles : styles
                 } font-normal px-4 py-2 rounded`}
-                onClick={(event) => {
-                    event.preventDefault();
-                    handleClick(true);
-                }}
+                onClick={() => handleClick()}
             >
                 {label}
             </a>
