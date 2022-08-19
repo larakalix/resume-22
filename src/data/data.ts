@@ -9,6 +9,13 @@ export const links: HeaderLinkProps[] = [
         mobileClick: null,
     },
     {
+        label: "Blog",
+        route: "/b",
+        anker: "",
+        isOnMobile: false,
+        mobileClick: null,
+    },
+    {
         label: "About",
         route: "/about",
         anker: "",
@@ -27,13 +34,6 @@ export const links: HeaderLinkProps[] = [
     {
         label: "Projects",
         route: "/projects",
-        anker: "",
-        isOnMobile: false,
-        mobileClick: null,
-    },
-    {
-        label: "Blog",
-        route: "/b",
         anker: "",
         isOnMobile: false,
         mobileClick: null,
