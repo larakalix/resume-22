@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import { urlFor } from "../../../sanity/builder";
 
@@ -10,7 +11,7 @@ export const CircleAuthor = ({ name, image }: AuthorProps) => {
     const metric = 64;
     return (
         <div className="flex items-center justify-center w-10 h-10 overflow-hidden rounded-full first:ml-0 ml-[-10px] border-2 border-black">
-            <Image
+            <img
                 src={urlFor(image).width(metric).height(metric).url()}
                 alt={name}
                 width={metric}

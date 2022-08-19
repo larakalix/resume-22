@@ -23,7 +23,7 @@ export const PostContent = ({ body, author }: PostProps) => {
 
 const UserBadge = ({ name, image }: AuthorProps) => {
     return (
-        <span className="text-v-small text-v-gray font-light relative z-10">
+        <span className="text-v-small text-v-gray font-light">
             Posted by
             <CircleAuthor name={name} image={image} />
         </span>
