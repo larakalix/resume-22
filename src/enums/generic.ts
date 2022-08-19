@@ -1,6 +1,7 @@
 export enum PieceType {
     Block = "block",
     Image = "image",
+    Code = "code",
 }
 
 export enum HeadingTag {

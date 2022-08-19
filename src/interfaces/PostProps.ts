@@ -29,6 +29,7 @@ export interface Body {
     markDefs: any[];
     style: string;
     asset?: Asset;
+    code?: string;
 }
 
 export interface Asset {

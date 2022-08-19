@@ -1,8 +1,8 @@
-import { HeadingTag, PiecesTag } from "../../enums";
-import { Body } from "../../interfaces/PostProps";
-import { Blockquote, Header, Paragraph } from "../generic";
+import { HeadingTag, PiecesTag } from "../../../enums";
+import { Body } from "../../../interfaces/PostProps";
+import { Blockquote, Header, Paragraph } from "../../generic";
 
-export const ContentStyle = ({ children, style = PiecesTag.Normal }: Body) => {
+export const ContentBlock = ({ children, style = PiecesTag.Normal }: Body) => {
     const { text } = children[0];
 
     const elements: { [key: string]: JSX.Element } = {
@@ -11,7 +11,7 @@ export const ContentStyle = ({ children, style = PiecesTag.Normal }: Body) => {
             <Header
                 text={text}
                 type={style as HeadingTag}
-                className="text-white text-[2rem] leading-[2.25rem] font-bold"
+                className="text-white text-[2rem] leading-[2.25rem] font-bold mt-6 mb-2"
             />
         ),
         [PiecesTag.Blockqoute]: (

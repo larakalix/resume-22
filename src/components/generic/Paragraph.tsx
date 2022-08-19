@@ -8,7 +8,7 @@ export const Paragraph = ({ text, className, children }: Props) => {
     return (
         <>
             <p
-                className={`font-montserrat text-black dark:text-[white] tracking-[-.02em] font-normal leading-[1.6] mt-10 first:mt-0 text-[1rem] md:text-[1.25rem] ${className}`}
+                className={`font-montserrat text-black dark:text-[white] tracking-[-.02em] font-normal leading-[1.6] mt-8 first:mt-0 text-[1rem] md:text-[1.2rem] ${className}`}
             >
                 {text}
             </p>
