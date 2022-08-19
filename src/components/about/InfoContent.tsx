@@ -15,3 +15,4 @@ export const InfoContent = ({ description }: Props) => {
         </div>
     );
 };
+

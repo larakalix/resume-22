@@ -8,9 +8,7 @@ const ContactWrap = ({ children }: Props) => {
     return (
         <>
             {children}
-            <div className="my-4">
-                <NeedProject />
-            </div>
+            <NeedProject />
         </>
     );
 };

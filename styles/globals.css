@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    font-size: 16px;
+    --gradient-from: 235 54 127;
+    --gradient-to: 121 40 202;
+}
+
 #nprogress {
     --primary-color: #0870f3;
     pointer-events: none;
@@ -70,4 +76,21 @@
     100% {
         transform: rotate(360deg);
     }
+}
+
+.bg-single-post {
+    background: linear-gradient(180deg, #000 0, transparent 100%),
+        linear-gradient(
+            90deg,
+            rgb(var(--gradient-from, 85 85 85) / 0.2) 0,
+            rgb(var(--gradient-to, 85 85 85) / 0.2) 100%
+        );
+}
+
+.bg-bullet {
+    background: linear-gradient(
+        135deg,
+        rgba(var(--gradient-from) / 0.3) 0,
+        rgba(var(--gradient-to) / 0.3) 100%
+    );
 }

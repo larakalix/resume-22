@@ -1,3 +1,5 @@
+import { Child } from "./GenericProps";
+
 export interface PageStaticProps {
     _createdAt: Date;
     _id: string;
@@ -16,11 +18,4 @@ export interface Description {
     children: Child[];
     markDefs: any[];
     style: string;
-}
-
-export interface Child {
-    _key: string;
-    _type: string;
-    marks: any[];
-    text: string;
 }

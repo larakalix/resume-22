@@ -7,7 +7,7 @@ const nextConfig = {
         NEXT_API_ID: process.env.NEXT_API_ID,
     },
     images: {
-        domains: ["www.datocms-assets.com"],
+        domains: ["www.datocms-assets.com", "cdn.sanity.io"],
     },
 };
 

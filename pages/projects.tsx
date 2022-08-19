@@ -6,7 +6,6 @@ import { ProjectPageProps } from "../src/interfaces/pages/ProjectProps";
 import { ProjectsScreen } from "../src/pages/projects/ProjectsScreen";
 
 const Projects = ({ projects }: ProjectPageProps) => {
-    console.log("projects", JSON.stringify(projects, null, 10));
     return (
         <ContactWrap>
             <Head>
