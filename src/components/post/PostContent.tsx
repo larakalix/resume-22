@@ -5,6 +5,7 @@ import { ContentImage } from "./ContentImage";
 import { ContentStyle } from "./ContentStyle";
 
 export const PostContent = ({ body, author }: PostProps) => {
+    // console.log("body", body);
     return (
         <div className="flex items-start justify-center px-6">
             <div className="w-full md:w-3/4 p-6 md:p-20 md:pl-0">

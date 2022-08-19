@@ -3,5 +3,13 @@ import { urlFor } from "../../../sanity/builder";
 import { Body } from "../../interfaces/PostProps";
 
 export const ContentImage = ({ _key, asset }: Body) => {
-    return <img src={urlFor(asset?._ref).url()} alt={_key} />;
+    return (
+        <div className="mb-4 mt-2 overflow-hidden rounded-sm">
+            <img
+                src={urlFor(asset?._ref).url()}
+                alt={_key}
+                className="rounded-sm"
+            />
+        </div>
+    );
 };
