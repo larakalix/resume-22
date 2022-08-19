@@ -15,7 +15,7 @@ export const EmblaCarousel = ({ options, slides }: PropType) => {
         <div className={styles.embla} ref={emblaRef}>
             <div className={styles.embla__container}>
                 {slides.map((slide, index) => (
-                    <div className="relative flex" key={index}>
+                    <div className="relative flex flex-none" key={index}>
                         {slide}
                     </div>
                 ))}
