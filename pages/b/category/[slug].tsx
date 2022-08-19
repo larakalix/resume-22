@@ -18,7 +18,7 @@ const CategoryBlog = ({ posts, categories, slug }: Props) => {
     return (
         <ContactWrap>
             <Head>
-                <title>About me</title>
+                <title>Blog - {title}</title>
             </Head>
             <PostScreen title={title} posts={posts} categories={categories} />
         </ContactWrap>

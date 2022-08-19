@@ -11,7 +11,7 @@ const Blog = ({ posts, categories }: BlogPageProps) => {
     return (
         <ContactWrap>
             <Head>
-                <title>About me</title>
+                <title>Blog</title>
             </Head>
             <PostScreen
                 title="All Posts"

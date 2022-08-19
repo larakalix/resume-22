@@ -9,7 +9,7 @@ export const SinglePost = ({ post }: SinglePostPageProps) => {
     return (
         <ContactWrap>
             <Head>
-                <title>Single post</title>
+                <title>{post.title}</title>
             </Head>
             <SinglePostScreen post={post} />
         </ContactWrap>
