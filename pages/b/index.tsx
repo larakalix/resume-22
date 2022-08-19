@@ -6,8 +6,6 @@ import { BlogPageProps } from "../../src/interfaces/pages/BlogPageProps";
 import { PostScreen } from "../../src/pages/post/PostScreen";
 
 const Blog = ({ posts, categories }: BlogPageProps) => {
-    console.log("posts", posts);
-    console.log("categories", categories);
     return (
         <ContactWrap>
             <Head>
