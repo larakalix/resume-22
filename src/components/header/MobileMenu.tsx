@@ -12,7 +12,7 @@ interface Props {
 export const MobileMenu = ({ links, handleClick }: Props) => {
     return (
         <motion.div
-            className="fixed top-0 left-0 bg-white h-screen flex items-center w-full ease-out"
+            className="fixed top-0 left-0 bg-white h-screen flex items-center w-full ease-out z-50"
             {...mobile_menu_config}
         >
             <div className="absolute top-0 right-0 p-8">

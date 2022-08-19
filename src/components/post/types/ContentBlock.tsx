@@ -20,4 +20,5 @@ export const ContentBlock = ({ children, style = PiecesTag.Normal }: Body) => {
     };
 
     return elements[style];
+    // return <div className="w-full max-w-[90vw] mx-auto">{elements[style]}</div>;
 };

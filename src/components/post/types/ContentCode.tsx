@@ -6,7 +6,7 @@ Refractor.registerLanguage(js);
 
 export const ContentCode = ({ code }: Body) => {
     return (
-        <div className="overflow-hidden rounded-sm">
+        <div className="overflow-hidden rounded-sm w-full max-w-[90vw] m-auto text-[0.7rem] md:text-[1rem]">
             <Refractor
                 language="js"
                 value={code!}

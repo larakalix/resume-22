@@ -2,9 +2,9 @@ import { CategoryProps, PostProps } from "../../interfaces";
 
 export const PostHeader = ({ title, categories, _createdAt }: PostProps) => (
     <div className="bg-black w-full">
-        <div className="pt-20 pb-24 px-12 bg-single-post">
+        <div className="pt-10 pb-14 px-8 md:pt-20 md:pb-24 md:px-12 bg-single-post">
             <div>
-                <div className="bg-bullet text-white inline py-2 px-3 rounded-3xl font-light whitespace-nowrap text-v-small">
+                <div className="bg-bullet text-white inline py-2 px-4 rounded-3xl font-light whitespace-nowrap text-v-small">
                     {categories
                         ?.map(({ title }: CategoryProps) => title)
                         .join(", ")}
