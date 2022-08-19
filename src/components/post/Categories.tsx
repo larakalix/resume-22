@@ -1,11 +1,12 @@
 import Link from "next/link";
-import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
 import { CategoryProps } from "../../interfaces";
+import { EmblaCarousel } from "../generic/carousel/Carousel";
 
 export const Categories = ({ categories }: { categories: CategoryProps[] }) => {
     return (
-        <div className="w-full md:w-[320px] flex-shrink-0 max-w-[20vw] h-auto md:h-[100vh] min-h-full">
+        <div className="w-full md:w-[320px] flex-shrink-0 max-w-full md:max-w-[20vw] h-auto md:h-[100vh] min-h-full">
             <DesktopLinks categories={categories} />
+            <MobileLinks categories={categories} />
         </div>
     );
 };
@@ -27,6 +28,33 @@ const DesktopLinks = ({ categories }: { categories: CategoryProps[] }) => {
                 />
             ))}
         </ul>
+    );
+};
+
+const MobileLinks = ({ categories }: { categories: CategoryProps[] }) => {
+    return (
+        <div className="block md:hidden w-full mb-2">
+            <EmblaCarousel
+                slides={categories?.map(({ _key, title, slug }) => (
+                    <div key={_key}>
+                        <Link href={`/b/category/${slug.current}`}>
+                            <a className="text-v-gray mr-3 select-none cursor-pointer transition-all">
+                                {title}
+                            </a>
+                        </Link>
+                    </div>
+                ))}
+                options={{
+                    align: "start",
+                    containScroll: "keepSnaps",
+                    startIndex: 0,
+                    draggable: true,
+                    loop: false,
+                    slidesToScroll: 1,
+                    skipSnaps: true,
+                }}
+            />
+        </div>
     );
 };
 
