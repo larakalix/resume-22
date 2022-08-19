@@ -11,7 +11,7 @@ export const Post = ({
     author,
 }: PostProps) => {
     return (
-        <div className="ml-8 mb-4 p-8 border-v-border border rounded-xl bg-white dark:bg-black">
+        <div className="ml-0 md:ml-8 mb-4 p-8 border-v-border border rounded-xl bg-white dark:bg-black">
             <Link href={`/b/${slug.current}`}>
                 <a>
                     <h2 className="text-black dark:text-white font-bold max-w-2xl">

@@ -13,7 +13,7 @@ export const PostHeader = ({ title, categories, _createdAt }: PostProps) => (
                     {new Date(_createdAt).toDateString()}
                 </span>
             </div>
-            <h1 className="text-white text-v-single-post-title tracking-[-.04em] leading-none font-bold mt-8">
+            <h1 className="text-white text-[2rem] md:text-v-single-post-title tracking-[-.04em] leading-none font-bold mt-8">
                 {title}
             </h1>
         </div>

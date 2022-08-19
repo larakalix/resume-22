@@ -14,7 +14,7 @@ export const Posts = ({ posts, title }: Props) => {
             <Header
                 text={title}
                 type={HeadingTag.H1}
-                className="text-[2rem] text-white px-8 pb-8 font-semibold leading-[-.049375rem]"
+                className="text-[2rem] text-white px-0 md:px-8 pb-8 font-semibold leading-[-.049375rem]"
             />
             {posts.length > 0 ? (
                 posts?.map(({ _id, ...props }: PostProps) => (

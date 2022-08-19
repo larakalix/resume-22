@@ -15,7 +15,7 @@ export const PostScreen = ({ title, posts, categories }: Props) => {
             className="min-h-screen flex items-center justify-center flex-col p-8 m-auto md:max-w-5xl lg:max-w-7xl"
             {...div_config}
         >
-            <div className="flex flex-row align-[stretch] justify-start flex-initial w-full">
+            <div className="flex flex-col md:flex-row align-[stretch] justify-start flex-initial w-full">
                 <Categories categories={categories} />
                 <Posts title={title} posts={posts} />
             </div>
