@@ -3,7 +3,7 @@ import { CircleAuthor } from "./CircleAuthor";
 import { BlockType } from "./BlockType";
 
 export const PostContent = ({ body, author }: PostProps) => {
-    console.log("body", body);
+    // console.log("body", body);
     return (
         <div className="flex items-start justify-center w-full max-w-[100vw]">
             <div className="w-full md:w-3/4 p-6 md:p-20 md:pl-10">
