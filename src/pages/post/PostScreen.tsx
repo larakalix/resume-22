@@ -11,8 +11,8 @@ interface Props extends BlogPageProps {
 export const PostScreen = ({ title, posts, categories }: Props) => {
     return (
         <motion.div
-            id="projects"
-            className="min-h-screen p-8 m-auto md:max-w-5xl lg:max-w-7xl"
+            id="posts"
+            className="min-h-screen py-8 m-auto md:max-w-5xl lg:max-w-7xl"
             {...div_config}
         >
             <div className="flex flex-col md:flex-row align-[stretch] justify-start flex-initial w-full">
