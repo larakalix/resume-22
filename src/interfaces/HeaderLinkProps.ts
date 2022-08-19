@@ -1,9 +1,12 @@
 import { GenericDateProps } from "./GenericProps";
 
-export interface HeaderLinkProps extends GenericDateProps {
+interface SanityProps extends GenericDateProps {
     _id: string;
     _rev: string;
     _type: string;
+}
+
+export interface HeaderLinkProps {
     route: string;
     anker: string;
     label: string;

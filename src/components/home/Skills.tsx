@@ -25,6 +25,7 @@ export const Skills = ({ skills }: HomePageProps) => {
                         <Paragraph
                             text={description}
                             className="w-full mt-4 pr-0 md:pr-8"
+                            markDefs={[]}
                         />
                     </motion.div>
                 ))}
