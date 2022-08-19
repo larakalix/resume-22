@@ -15,3 +15,8 @@ export interface GenericTagProps {
 export interface GenericTagWtTypeProps extends GenericTagProps {
     type: HeadingTag;
 }
+
+export interface GenericDateProps {
+    _createdAt: Date;
+    _updatedAt: Date;
+}

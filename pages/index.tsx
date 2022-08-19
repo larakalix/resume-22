@@ -1,16 +1,19 @@
-import type { GetServerSidePropsContext, NextPage } from "next";
+/* eslint-disable react-hooks/exhaustive-deps */
+import type { GetServerSidePropsContext } from "next";
 import Head from "next/head";
 import client from "../sanity/client";
 import ContactWrap from "../src/components/generic/ContactWrap";
 import { useDateInfo } from "../src/hooks/useDateInfo";
+import { HeaderLinkProps } from "../src/interfaces";
 import { HomePageProps } from "../src/interfaces/pages/HomeProps";
 import { HomeScreen } from "../src/pages";
 
 interface Props extends HomePageProps {
+    links: HeaderLinkProps[];
     notFound: boolean;
 }
 
-const Home = ({ skills, notFound }: Props) => {
+const Home = ({ links, skills, notFound }: Props) => {
     const { weekDay } = useDateInfo();
 
     const day = weekDay();
@@ -35,14 +38,18 @@ const Home = ({ skills, notFound }: Props) => {
 export const getServerSideProps = async ({
     req,
 }: GetServerSidePropsContext) => {
-    const query = `*[ _type == "skills"]`;
-    const result = await client.fetch(query);
+    const links_query = `*[ _type == "headerLink"]`;
+    const links = await client.fetch(links_query);
 
-    if (!result) return { props: null, notFound: true };
+    const skills_query = `*[ _type == "skills"]`;
+    const skills = await client.fetch(skills_query);
+
+    if (!skills) return { props: null, notFound: true };
 
     return {
         props: {
-            skills: result,
+            links,
+            skills,
             notFound: false,
         },
     };

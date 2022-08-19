@@ -1,12 +1,10 @@
 import { CategoryProps } from "./CategoryProps";
-import { Child } from "./GenericProps";
+import { Child, GenericDateProps } from "./GenericProps";
 
-export interface PostProps {
-    _createdAt: Date;
+export interface PostProps extends GenericDateProps {
     _id: string;
     _rev: string;
     _type: string;
-    _updatedAt: Date;
     author: AuthorProps;
     body: Body[];
     categories: CategoryProps[];
@@ -26,10 +24,16 @@ export interface Body {
     _key: string;
     _type: string;
     children: Child[];
-    markDefs: any[];
+    markDefs: MarkDef[];
     style: string;
     asset?: Asset;
     code?: string;
+}
+
+export interface MarkDef {
+    _key: string;
+    _type: string;
+    mark: string;
 }
 
 export interface Asset {

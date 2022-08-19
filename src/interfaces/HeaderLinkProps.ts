@@ -1,4 +1,9 @@
-export interface HeaderLinkProps {
+import { GenericDateProps } from "./GenericProps";
+
+export interface HeaderLinkProps extends GenericDateProps {
+    _id: string;
+    _rev: string;
+    _type: string;
     route: string;
     anker: string;
     label: string;

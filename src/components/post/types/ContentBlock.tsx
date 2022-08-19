@@ -2,11 +2,15 @@ import { HeadingTag, PiecesTag } from "../../../enums";
 import { Body } from "../../../interfaces/PostProps";
 import { Blockquote, Header, Paragraph } from "../../generic";
 
-export const ContentBlock = ({ children, style = PiecesTag.Normal }: Body) => {
+export const ContentBlock = ({
+    markDefs,
+    children,
+    style = PiecesTag.Normal,
+}: Body) => {
     const { text } = children[0];
 
     const elements: { [key: string]: JSX.Element } = {
-        [PiecesTag.Normal]: <Paragraph text={text} />,
+        [PiecesTag.Normal]: <Paragraph text={text} markDefs={markDefs} />,
         [PiecesTag.H2]: (
             <Header
                 text={text}
@@ -20,5 +24,4 @@ export const ContentBlock = ({ children, style = PiecesTag.Normal }: Body) => {
     };
 
     return elements[style];
-    // return <div className="w-full max-w-[90vw] mx-auto">{elements[style]}</div>;
 };

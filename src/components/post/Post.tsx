@@ -14,20 +14,25 @@ export const Post = ({
         <div className="ml-0 md:ml-8 mb-4 p-8 border-v-border border rounded-xl bg-white dark:bg-black">
             <Link href={`/b/${slug.current}`}>
                 <a>
-                    <h2 className="text-black dark:text-white font-bold max-w-2xl">
+                    <h2 className="text-black dark:text-white font-bold max-w-2xl text-[1.2rem] md:text-[2rem] leading-none">
                         {title}
                     </h2>
                     <div className="flex items-center justify-between mt-12">
-                        <div className="text-v-gray font-light text-v-small">
+                        <div className="flex text-v-gray font-light text-v-small">
                             <div className="flex flex-wrap justify-start items-center">
                                 <CircleAuthor
                                     name={author.name}
                                     image={author.image}
                                 />
                             </div>
-                            <span>{new Date(publishedAt).toDateString()}</span>
+                            <div className="ml-4">
+                                <span>{author.name}</span>
+                                <span className="text-[0.8rem] block">
+                                    {new Date(publishedAt).toDateString()}
+                                </span>
+                            </div>
                         </div>
-                        <p className="bg-v-gray text-white dark:bg-v-bullet dark:text-v-gray font-light text-[0.75rem] px-3 py-[10px] rounded-[32px]">
+                        <p className="bg-v-gray text-white dark:bg-v-bullet dark:text-v-gray font-light text-[0.8rem] px-3 py-[10px] rounded-[32px]">
                             {categories
                                 .map(({ title }: CategoryProps) => title)
                                 .join(", ")}

@@ -21,3 +21,7 @@ export enum PiecesTag {
     H3 = "h3",
     H4 = "h4",
 }
+
+export enum MarkDefType {
+    Link = "link",
+}

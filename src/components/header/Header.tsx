@@ -7,6 +7,11 @@ import { Brand } from "./Brand";
 import { DesktopMenu } from "./DesktopMenu";
 import { MobileMenu } from "./MobileMenu";
 import { ThemeSelector } from "./ThemeSelector";
+import { HeaderLinkProps } from "../../interfaces";
+
+interface Props {
+    links: HeaderLinkProps[];
+}
 
 export const Header = () => {
     const [show, setShow] = useState(false);

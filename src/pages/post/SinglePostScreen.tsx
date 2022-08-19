@@ -7,7 +7,7 @@ export const SinglePostScreen = ({ post }: SinglePostPageProps) => {
     return (
         <motion.div
             id={post._id}
-            className="min-h-screen flex items-center justify-start flex-col m-auto md:max-w-5xl lg:max-w-7xl"
+            className="min-h-screen flex items-center justify-start flex-col m-auto max-w-[100vw]"
             {...div_config}
         >
             <PostHeader {...post} />

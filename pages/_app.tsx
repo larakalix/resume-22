@@ -17,11 +17,12 @@ NProgress.configure({ showSpinner: false });
 const { Provider } = ThemeContext;
 
 function MyApp({ Component, pageProps }: AppProps) {
-    const { theme, changeTheme } = useTheme();
+    const { links, theme, changeTheme } = useTheme();
 
     return (
         <Provider
             value={{
+                links,
                 theme,
                 changeTheme,
             }}
