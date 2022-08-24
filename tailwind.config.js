@@ -17,6 +17,7 @@ module.exports = {
                 "v-gray": "#696969",
                 "v-border": "#333",
                 "v-bullet": "#111",
+                "v-tag": "#f3f4f6",
             },
             fontSize: {
                 "v-small": "0.875rem",

@@ -9,6 +9,7 @@ export interface PostProps extends GenericDateProps {
     body: Body[];
     showNewsletter: boolean;
     showIndexes: boolean;
+    tags: string[];
     categories: CategoryProps[];
     publishedAt: Date;
     slug: Slug;

@@ -10,6 +10,7 @@ export const PostContent = ({
     author,
     showNewsletter,
     showIndexes,
+    tags,
 }: PostProps) => {
     const indexes = showIndexes
         ? body.filter(
@@ -34,8 +35,21 @@ export const PostContent = ({
             </div>
             <div className="hidden md:block w-1/4 p-10 pt-20 border-l border-l-v-border h-screen min-h-full sticky top-0">
                 <UserBadge {...author} />
+                <div className="flex flex-wrap mt-4">
+                    {tags?.map((label) => (
+                        <Tag key={`${label.trim()}_tag`} label={label} />
+                    ))}
+                </div>
             </div>
         </div>
+    );
+};
+
+const Tag = ({ label }: { label: string }) => {
+    return (
+        <span className="text-black bg-v-tag py-1 px-2 rounded-sm text-[0.8rem] mr-1 mb-1">
+            {label}
+        </span>
     );
 };
 

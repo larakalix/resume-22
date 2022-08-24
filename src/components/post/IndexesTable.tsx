@@ -8,7 +8,6 @@ interface Props {
 }
 
 export const IndexesTable = ({ body }: Props) => {
-    console.log("IndexesTable", body);
     return (
         <div className="bg-white w-full p-4 rounded-sm">
             <h3 className="leading-[1.75rem] tracking-wide text-[1.25rem] border-b border-b-slate-100 pb-2 mb-2 flex items-center">
