@@ -1,8 +1,9 @@
 import { AuthorProps, PostProps } from "../../interfaces/PostProps";
 import { CircleAuthor } from "./CircleAuthor";
 import { BlockType } from "./BlockType";
+import { Newsletter } from "../generic";
 
-export const PostContent = ({ body, author }: PostProps) => {
+export const PostContent = ({ body, author, showNewsletter }: PostProps) => {
     // console.log("body", body);
     return (
         <div className="flex items-start justify-center w-full max-w-[100vw]">
@@ -13,6 +14,7 @@ export const PostContent = ({ body, author }: PostProps) => {
                 {body?.map(({ _key, _type, ...props }) => (
                     <BlockType key={_key} {...{ _key, _type, ...props }} />
                 ))}
+                {showNewsletter && <Newsletter />}
             </div>
             <div className="hidden md:block w-1/4 p-10 pt-20 border-l border-l-v-border h-screen min-h-full sticky top-0">
                 <UserBadge {...author} />

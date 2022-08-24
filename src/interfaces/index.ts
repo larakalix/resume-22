@@ -1,6 +1,7 @@
 export * from './CategoryProps';
 export * from './GenericProps';
 export * from './HeaderLinkProps';
+export * from './NewsletterProps';
 export * from './PageStaticProps';
 export * from './PostProps';
 export * from './Projects';

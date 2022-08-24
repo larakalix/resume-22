@@ -20,7 +20,7 @@ export const getServerSideProps = async ({
     query: { slug },
 }: GetServerSidePropsContext) => {
     const query = `*[_type == "post" && slug.current == $slug][0]{
-        _id, _createdAt, title, body, categories[]->{_id,title}, author->{_id,name,image} }`;
+        _id, _createdAt, title, body, showNewsletter, categories[]->{_id,title}, author->{_id,name,image} }`;
     const result = await client.fetch(query, { slug });
 
     return {
