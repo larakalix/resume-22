@@ -23,6 +23,7 @@ export const Skills = ({ skills }: HomePageProps) => {
                             {name}
                         </h1>
                         <Paragraph
+                            _key={id}
                             text={description}
                             className="w-full mt-4 pr-0 md:pr-8"
                             markDefs={[]}

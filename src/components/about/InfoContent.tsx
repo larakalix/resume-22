@@ -10,7 +10,14 @@ export const InfoContent = ({ description }: Props) => {
         <div className="max-w-full md:max-w-5xl">
             {description.map(({ _key, children }) => {
                 const { text } = children[0];
-                return <Paragraph key={_key} text={text} markDefs={[]} />;
+                return (
+                    <Paragraph
+                        key={_key}
+                        _key={_key}
+                        text={text}
+                        markDefs={[]}
+                    />
+                );
             })}
         </div>
     );
