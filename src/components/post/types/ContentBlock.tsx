@@ -1,8 +1,10 @@
 import { HeadingTag, PiecesTag } from "../../../enums";
 import { Body } from "../../../interfaces/PostProps";
 import { Blockquote, Header, Paragraph } from "../../generic";
+import { ContentIndex } from "./ContentIndex";
 
 export const ContentBlock = ({
+    _key,
     markDefs,
     children,
     style = PiecesTag.Normal,
@@ -10,16 +12,26 @@ export const ContentBlock = ({
     const { text } = children[0];
 
     const elements: { [key: string]: JSX.Element } = {
-        [PiecesTag.Normal]: <Paragraph text={text} markDefs={markDefs} />,
+        [PiecesTag.Normal]: (
+            <Paragraph _key={_key} text={text} markDefs={markDefs} />
+        ),
         [PiecesTag.H2]: (
             <Header
+                _key={_key}
                 text={text}
                 type={style as HeadingTag}
                 className="text-white text-[2rem] leading-[2.25rem] font-bold mt-6 mb-2"
             />
         ),
         [PiecesTag.Blockqoute]: (
-            <Blockquote text={text} className="text-white" />
+            <Blockquote _key={_key} text={text} className="text-white" />
+        ),
+        [PiecesTag.Link]: (
+            <ContentIndex
+                _key={_key}
+                text={text}
+                className="text-black hover:text-v-blue font-bold text-[1.125rem] transition-colors"
+            />
         ),
     };
 

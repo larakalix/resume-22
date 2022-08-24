@@ -2,12 +2,28 @@ import { AuthorProps, PostProps } from "../../interfaces/PostProps";
 import { CircleAuthor } from "./CircleAuthor";
 import { BlockType } from "./BlockType";
 import { Newsletter } from "../generic";
+import { IndexesTable } from ".";
+import { HeadingTag } from "../../enums";
 
-export const PostContent = ({ body, author, showNewsletter }: PostProps) => {
-    // console.log("body", body);
+export const PostContent = ({
+    body,
+    author,
+    showNewsletter,
+    showIndexes,
+}: PostProps) => {
+    const indexes = showIndexes
+        ? body.filter(
+              ({ style, children }) =>
+                  Object.values(HeadingTag).includes(style as HeadingTag) &&
+                  children.length > 0 &&
+                  children[0].text
+          )
+        : [];
+
     return (
         <div className="flex items-start justify-center w-full max-w-[100vw]">
             <div className="w-full md:w-3/4 p-6 md:p-20 md:pl-10">
+                {showIndexes && <IndexesTable body={indexes} />}
                 <div className="block md:hidden">
                     <UserBadge {...author} />
                 </div>

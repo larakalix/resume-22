@@ -8,6 +8,7 @@ export interface Child {
 }
 
 export interface GenericTagProps {
+    _key: string;
     text: string;
     className?: string | undefined;
 }

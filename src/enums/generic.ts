@@ -16,6 +16,7 @@ export enum PiecesTag {
     Small = "small",
     Large = "large",
     Blockqoute = "blockquote",
+    Link = "a",
     H1 = "h1",
     H2 = "h2",
     H3 = "h3",
