@@ -3,7 +3,6 @@ import { CategoryProps, PostProps } from "../../interfaces";
 import { CircleAuthor } from "./CircleAuthor";
 
 export const Post = ({
-    _createdAt,
     publishedAt,
     title,
     slug,

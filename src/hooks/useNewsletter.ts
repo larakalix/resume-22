@@ -17,7 +17,7 @@ const useNewsLetter = () => {
         }`;
         const result = await client.fetch(query, { email });
         if (result)
-            addToast("You are already subscribed", {
+            addToast("you have already subscribed.", {
                 appearance: "info",
                 autoDismiss: true,
             });

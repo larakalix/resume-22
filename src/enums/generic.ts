@@ -3,6 +3,7 @@ export enum PieceType {
     Image = "image",
     Code = "code",
     Youtube = "youtube",
+    Shortcode = "shortCode",
 }
 
 export enum HeadingTag {

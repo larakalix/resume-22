@@ -8,11 +8,11 @@ const initialValues: NewsletterProps = { email: "" };
 export const Newsletter = () => {
     const { isSubscribed, subscribeEmail } = useNewsLetter();
     return (
-        <div className="w-full bg-white color-black h-[20rem] rounded-sm flex items-center justify-center flex-col mt-8 text-center">
-            <h3 className="text-[1.875rem] leading-[2.25rem]">
+        <div className="w-full bg-white color-black h-[20rem] rounded-xl flex items-center justify-center flex-col mt-8 text-center px-4">
+            <h3 className="text-[1.4rem] md:text-[1.875rem] leading-[2.25rem]">
                 Subscribe to my newsletter
             </h3>
-            <p>
+            <p className="text-[0.9rem] md:text-[1rem]">
                 Subscribe to my newsletter and never miss my upcoming articles
             </p>
             <Formik
@@ -27,16 +27,16 @@ export const Newsletter = () => {
                 {({ touched, handleSubmit, isSubmitting }) => (
                     <Form
                         onSubmit={handleSubmit}
-                        className="w-full max-w-[80%] sm:max-w-sm md:max-w-md lg:max-w-lg mt-8"
+                        className="w-full max-w-full sm:max-w-sm md:max-w-md lg:max-w-lg mt-8"
                     >
                         <Field
                             name="email"
                             type="email"
                             placeholder="Enter your email address"
-                            className="shadow appearance-none border rounded w-full py-5 px-4 text-black leading-tight focus:outline-none focus:shadow-outline"
+                            className="shadow appearance-none border rounded-xl w-full py-5 px-4 text-black leading-tight focus:outline-none focus:shadow-outline"
                         />
                         {touched && (
-                            <div className="w-full py-3 text-[0.9rem] text-red-500">
+                            <div className="w-full py-3 text-[0.9rem] text-red-500 select-none">
                                 <ErrorMessage name="email" />
                             </div>
                         )}

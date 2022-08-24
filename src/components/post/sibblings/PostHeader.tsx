@@ -1,4 +1,4 @@
-import { CategoryProps, PostProps } from "../../interfaces";
+import { CategoryProps, PostProps } from "../../../interfaces";
 
 export const PostHeader = ({ title, categories, _createdAt }: PostProps) => (
     <div className="bg-black w-full">

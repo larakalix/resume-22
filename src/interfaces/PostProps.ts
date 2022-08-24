@@ -1,7 +1,13 @@
 import { CategoryProps } from "./CategoryProps";
 import { Child, GenericDateProps } from "./GenericProps";
 
-export interface PostProps extends GenericDateProps {
+export interface GenericPostProps extends GenericDateProps {
+    _id: string;
+    title: string;
+    slug: Slug;
+}
+
+export interface PostProps extends GenericPostProps {
     _id: string;
     _rev: string;
     _type: string;
@@ -13,8 +19,7 @@ export interface PostProps extends GenericDateProps {
     tags: string[];
     categories: CategoryProps[];
     publishedAt: Date;
-    slug: Slug;
-    title: string;
+    relatedPosts: GenericPostProps[];
 }
 
 export interface AuthorProps {
