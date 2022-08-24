@@ -1,4 +1,4 @@
-import { ContentBlock, ContentCode, ContentImage } from ".";
+import { ContentBlock, ContentCode, ContentImage, ContentVideo } from ".";
 import { PieceType } from "../../enums";
 import { Body } from "../../interfaces";
 
@@ -11,6 +11,7 @@ export const BlockType = ({ _type, ...props }: Body) => {
         [PieceType.Block]: <ContentBlock _type={_type} {...props} />,
         [PieceType.Image]: <ContentImage _type={_type} {...props} />,
         [PieceType.Code]: <ContentCode _type={_type} {...props} />,
+        [PieceType.Youtube]: <ContentVideo _type={_type} {...props} />,
     };
 
     return types[_type];

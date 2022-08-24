@@ -7,6 +7,7 @@ export interface PostProps extends GenericDateProps {
     _type: string;
     author: AuthorProps;
     body: Body[];
+    content: any;
     showNewsletter: boolean;
     showIndexes: boolean;
     tags: string[];
@@ -31,6 +32,7 @@ export interface Body {
     style: string;
     asset?: Asset;
     code?: string;
+    url?: string;
 }
 
 export interface MarkDef {

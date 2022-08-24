@@ -23,6 +23,14 @@ export const ContentBlock = ({
                 className="text-white text-[2rem] leading-[2.25rem] font-bold mt-6 mb-2"
             />
         ),
+        [PiecesTag.H4]: (
+            <Header
+                _key={_key}
+                text={text}
+                type={style as HeadingTag}
+                className="text-white text-[1.4rem] leading-[2rem] font-semibold mt-5 mb-2"
+            />
+        ),
         [PiecesTag.Blockqoute]: (
             <Blockquote _key={_key} text={text} className="text-white" />
         ),

@@ -9,6 +9,7 @@ export const ContentImage = ({ _key, asset }: Body) => {
                 src={urlFor(asset?._ref).url()}
                 alt={_key}
                 className="rounded-sm"
+                loading="lazy"
             />
         </div>
     );

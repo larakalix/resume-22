@@ -1,3 +1,4 @@
+import ReactMarkdown from "react-markdown";
 import { AuthorProps, PostProps } from "../../interfaces/PostProps";
 import { CircleAuthor } from "./CircleAuthor";
 import { BlockType } from "./BlockType";
@@ -7,11 +8,13 @@ import { HeadingTag } from "../../enums";
 
 export const PostContent = ({
     body,
+    content,
     author,
     showNewsletter,
     showIndexes,
     tags,
 }: PostProps) => {
+    console.log("body", body);
     const indexes = showIndexes
         ? body.filter(
               ({ style, children }) =>
@@ -31,6 +34,11 @@ export const PostContent = ({
                 {body?.map(({ _key, _type, ...props }) => (
                     <BlockType key={_key} {...{ _key, _type, ...props }} />
                 ))}
+                {content && (
+                    <ReactMarkdown className="text-white">
+                        {content}
+                    </ReactMarkdown>
+                )}
                 {showNewsletter && <Newsletter />}
             </div>
             <div className="hidden md:block w-1/4 p-10 pt-20 border-l border-l-v-border h-screen min-h-full sticky top-0">

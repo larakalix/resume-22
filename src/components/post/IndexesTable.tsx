@@ -14,7 +14,6 @@ export const IndexesTable = ({ body }: Props) => {
                 <FiList className="mr-2 text-black" />
                 Main content
             </h3>
-
             <ul>
                 {body?.map(({ _key, _type, ...props }) => (
                     <li key={_key} className="py-2">
