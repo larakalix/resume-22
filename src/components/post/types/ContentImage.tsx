@@ -4,11 +4,11 @@ import { Body } from "../../../interfaces/PostProps";
 
 export const ContentImage = ({ _key, asset }: Body) => {
     return (
-        <div className="mb-4 mt-2 overflow-hidden rounded-xl">
+        <div className="mb-4 mt-2 overflow-hidden rounded-v-rounded">
             <img
                 src={urlFor(asset?._ref).url()}
                 alt={_key}
-                className="rounded-xl"
+                className="rounded-v-rounded"
                 loading="lazy"
             />
         </div>

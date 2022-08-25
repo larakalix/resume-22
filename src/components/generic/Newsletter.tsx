@@ -8,7 +8,7 @@ const initialValues: NewsletterProps = { email: "" };
 export const Newsletter = () => {
     const { isSubscribed, subscribeEmail } = useNewsLetter();
     return (
-        <div className="w-full bg-white color-black h-[20rem] rounded-xl flex items-center justify-center flex-col mt-8 text-center px-4">
+        <div className="w-full bg-white color-black h-[20rem] rounded-v-rounded flex items-center justify-center flex-col mt-8 text-center px-4 border border-black dark:border-white">
             <h3 className="text-[1.4rem] md:text-[1.875rem] leading-[2.25rem]">
                 Subscribe to my newsletter
             </h3>
@@ -33,7 +33,7 @@ export const Newsletter = () => {
                             name="email"
                             type="email"
                             placeholder="Enter your email address"
-                            className="shadow appearance-none border rounded-xl w-full py-5 px-4 text-black leading-tight focus:outline-none focus:shadow-outline"
+                            className="appearance-none border rounded-v-rounded w-full py-5 px-4 text-black leading-tight focus:outline-none"
                         />
                         {touched && (
                             <div className="w-full py-3 text-[0.9rem] text-red-500 select-none">
@@ -44,7 +44,7 @@ export const Newsletter = () => {
                         <button
                             type="submit"
                             disabled={isSubmitting}
-                            className="bg-v-blue hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition-colors select-none"
+                            className="bg-v-blue hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none transition-colors select-none"
                         >
                             Subscribe
                         </button>

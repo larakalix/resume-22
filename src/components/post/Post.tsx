@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { formatDistanceToNow } from "date-fns";
 import { CategoryProps, PostProps } from "../../interfaces";
 import { CircleAuthor } from "./CircleAuthor";
 
@@ -10,7 +11,7 @@ export const Post = ({
     author,
 }: PostProps) => {
     return (
-        <div className="ml-0 md:ml-8 mb-4 p-8 border-v-border border rounded-xl bg-white dark:bg-black">
+        <div className="ml-0 md:ml-8 mb-4 p-8 border-v-border border rounded-v-rounded bg-white dark:bg-black">
             <Link href={`/b/${slug.current}`}>
                 <a>
                     <h2 className="text-black dark:text-white font-bold max-w-2xl text-[1.2rem] md:text-[2rem] leading-none">
@@ -26,8 +27,10 @@ export const Post = ({
                             </div>
                             <div className="ml-4">
                                 <span>{author.name}</span>
-                                <span className="text-[0.8rem] block">
-                                    {new Date(publishedAt).toDateString()}
+                                <span className="text-[0.8rem] block capitalize">
+                                    {formatDistanceToNow(new Date(publishedAt))}{" "}
+                                    ago
+                                    {/* {new Date(publishedAt).toDateString()} */}
                                 </span>
                             </div>
                         </div>

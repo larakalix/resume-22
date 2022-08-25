@@ -11,6 +11,10 @@ module.exports = {
         fontFamily: {
             montserrat: ["Inter", "sans-serif"],
         },
+        borderRadius: {
+            "v-rounded": "0.30rem",
+            full: "1rem",
+        },
         extend: {
             colors: {
                 "v-blue": "#0070f3",

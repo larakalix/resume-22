@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from "next/image";
 import { urlFor } from "../../../sanity/builder";
 
 interface AuthorProps {

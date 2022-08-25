@@ -1,3 +1,4 @@
+import { formatDistanceToNow } from "date-fns";
 import { CategoryProps, PostProps } from "../../../interfaces";
 
 export const PostHeader = ({ title, categories, _createdAt }: PostProps) => (
@@ -9,8 +10,8 @@ export const PostHeader = ({ title, categories, _createdAt }: PostProps) => (
                         ?.map(({ title }: CategoryProps) => title)
                         .join(", ")}
                 </div>
-                <span className="text-v-small text-white font-light ml-3">
-                    {new Date(_createdAt).toDateString()}
+                <span className="text-v-small text-white font-light ml-3 capitalize">
+                    Published {formatDistanceToNow(new Date(_createdAt))} ago
                 </span>
             </div>
             <h1 className="text-white text-[2rem] md:text-v-single-post-title tracking-[-.04em] leading-none font-bold mt-8">
