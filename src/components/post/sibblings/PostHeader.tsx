@@ -1,11 +1,34 @@
 import { formatDistanceToNow } from "date-fns";
-import { CategoryProps, PostProps } from "../../../interfaces";
+import styled from "styled-components";
+import {
+    CategoryProps,
+    GenericBgImageProps,
+    PostProps,
+} from "../../../interfaces";
+import { urlFor } from "../../../../sanity/builder";
 
-export const PostHeader = ({ title, categories, _createdAt }: PostProps) => (
-    <div className="bg-black w-full">
-        <div className="pt-10 pb-14 px-8 md:pt-20 md:pb-24 md:px-12 bg-single-post">
+const Header = styled.div<GenericBgImageProps>`
+    background-image: url("${(p: GenericBgImageProps) => p.url}");
+    background-image: linear-gradient(
+            90deg,
+            rgb(var(--gradient-from, 85 85 85) / 0.2) 0,
+            rgb(var(--gradient-to, 85 85 85) / 0.2) 100%
+        ),
+        url("${(p: GenericBgImageProps) => p.url}");
+    background-size: cover;
+    background-position: center bottom;
+`;
+
+export const PostHeader = ({
+    banner,
+    title,
+    categories,
+    _createdAt,
+}: PostProps) => {
+    const content = (
+        <>
             <div>
-                <div className="bg-bullet text-white inline py-2 px-4 rounded-3xl font-light whitespace-nowrap text-v-small">
+                <div className="bg-bullet text-white inline py-2 px-4 rounded-full font-light whitespace-nowrap text-v-small">
                     {categories
                         ?.map(({ title }: CategoryProps) => title)
                         .join(", ")}
@@ -17,6 +40,22 @@ export const PostHeader = ({ title, categories, _createdAt }: PostProps) => (
             <h1 className="text-white text-[2rem] md:text-v-single-post-title tracking-[-.04em] leading-none font-bold mt-8">
                 {title}
             </h1>
+        </>
+    );
+    return (
+        <div className="bg-black w-full">
+            {banner ? (
+                <Header
+                    className="pt-10 pb-14 px-8 md:pt-20 md:pb-24 md:px-12"
+                    url={urlFor(banner?.asset?._ref).url()}
+                >
+                    {content}
+                </Header>
+            ) : (
+                <div className="pt-10 pb-14 px-8 md:pt-20 md:pb-24 md:px-12 bg-single-post">
+                    {content}
+                </div>
+            )}
         </div>
-    </div>
-);
+    );
+};

@@ -2,6 +2,8 @@ import { AiFillCaretLeft } from "react-icons/ai";
 import { HeadingTag } from "../../enums";
 import { GenericTagWtTypeProps } from "../../interfaces/GenericProps";
 
+const allowedTypes = [HeadingTag.H1, HeadingTag.H2];
+
 export const Header = ({
     _key,
     text,
@@ -34,9 +36,11 @@ export const Header = ({
 
     return (
         <div className="relative flex items-center">
-            <span className="absolute right-[-5.6rem] text-[2rem]">
-                <AiFillCaretLeft className="text-black dark:text-v-border" />
-            </span>
+            {allowedTypes.includes(type) && (
+                <span className="absolute right-[-5.6rem] text-[2rem] hidden md:block">
+                    <AiFillCaretLeft className="text-black dark:text-v-border" />
+                </span>
+            )}
             {heading[type]}
         </div>
     );

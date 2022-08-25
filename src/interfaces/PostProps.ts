@@ -20,6 +20,12 @@ export interface PostProps extends GenericPostProps {
     categories: CategoryProps[];
     publishedAt: Date;
     relatedPosts: GenericPostProps[];
+    banner?: Banner;
+}
+
+export interface Banner {
+    _type: string;
+    asset: Asset;
 }
 
 export interface AuthorProps {

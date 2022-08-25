@@ -44,7 +44,7 @@ export const Newsletter = () => {
                         <button
                             type="submit"
                             disabled={isSubmitting}
-                            className="bg-v-blue hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none transition-colors select-none"
+                            className="bg-v-blue hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-v-rounded focus:outline-none transition-colors select-none"
                         >
                             Subscribe
                         </button>
