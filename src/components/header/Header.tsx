@@ -4,17 +4,11 @@ import { HiMenuAlt3, HiX } from "react-icons/hi";
 import clsx from "clsx";
 import { links } from "../../data/data";
 import { Brand } from "./Brand";
-import { DesktopMenu } from "./DesktopMenu";
-import { MobileMenu } from "./MobileMenu";
 import { ThemeSelector } from "./ThemeSelector";
 import { HeaderLinkProps } from "../../interfaces";
-import { HeaderLink } from "./HeaderLink";
+import { HeaderLink } from "./sibblings/HeaderLink";
 
 import styles from "./styles/Nav.module.css";
-
-interface Props {
-    links: HeaderLinkProps[];
-}
 
 export const Header = () => {
     const [show, setShow] = useState(false);
@@ -22,6 +16,10 @@ export const Header = () => {
     const [lastScrollY, setLastScrollY] = useState(0);
 
     const handleClick = (value: boolean) => setShow(value);
+
+    const scrollTop = () => {
+        if (typeof window !== "undefined") window.scrollTo(0, 0);
+    };
 
     const controlNavbar = () => {
         if (typeof window !== "undefined")
@@ -65,11 +63,19 @@ export const Header = () => {
                 </ul>
 
                 <div className="flex justify-end flex-row-reverse md:flex-row">
-                    <a href="#nav" className={styles.nav__burger}>
+                    <a
+                        href="#nav"
+                        onClick={() => scrollTop()}
+                        className={styles.nav__burger}
+                    >
                         <HiMenuAlt3 className={styles.nav__icon} />
                     </a>
 
-                    <a href="#nonav" className={styles.nav__close}>
+                    <a
+                        href="#"
+                        onClick={() => scrollTop()}
+                        className={styles.nav__close}
+                    >
                         <HiX className={styles.nav__icon} />
                     </a>
 

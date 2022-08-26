@@ -2,8 +2,8 @@
 import { useRouter } from "next/router";
 import clsx from "clsx";
 import { motion } from "framer-motion";
-import { HeaderLinkProps } from "../../interfaces/HeaderLinkProps";
-import { div_config } from "../../configs/FramerMotion";
+import { HeaderLinkProps } from "../../../interfaces/HeaderLinkProps";
+import { div_config } from "../../../configs/FramerMotion";
 
 export const HeaderLink = ({
     anker,

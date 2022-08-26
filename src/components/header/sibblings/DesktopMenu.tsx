@@ -1,4 +1,4 @@
-import { HeaderLinkProps } from "../../interfaces/HeaderLinkProps";
+import { HeaderLinkProps } from "../../../interfaces/HeaderLinkProps";
 import { HeaderLink } from "./HeaderLink";
 
 export const DesktopMenu = ({ links }: { links: HeaderLinkProps[] }) => {
