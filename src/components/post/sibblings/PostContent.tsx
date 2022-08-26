@@ -15,7 +15,6 @@ export const PostContent = ({
     relatedPosts,
     _createdAt,
 }: PostProps) => {
-    // console.log("relatedPosts", relatedPosts);
     const indexes = showIndexes
         ? body.filter(
               ({ style, children }) =>

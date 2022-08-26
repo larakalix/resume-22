@@ -33,7 +33,6 @@ const useNewsLetter = () => {
                 email,
             })
             .then((response) => {
-                console.log("Ok", response);
                 addToast(`Thansk ${response?.email} for suscribing!`, {
                     appearance: "success",
                     autoDismiss: true,

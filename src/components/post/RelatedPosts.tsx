@@ -7,7 +7,6 @@ interface Props {
 }
 
 export const RelatedPosts = ({ posts }: Props) => {
-    console.log("RelatedPosts", posts);
     return (
         <div className="w-full grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-3">
             {posts?.map(({ _id, title, slug }) => (
