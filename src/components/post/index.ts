@@ -5,6 +5,7 @@ export * from './IndexesTable';
 export * from './Post';
 export * from './Posts';
 export * from './RelatedPosts';
+export * from './sibblings/Chronometer';
 export * from './sibblings/PostContent';
 export * from './sibblings/PostHeader';
 export * from './sibblings/PostSidebar';

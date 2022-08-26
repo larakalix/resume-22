@@ -1,6 +1,5 @@
-import clsx from "clsx";
 import { formatDistanceToNow } from "date-fns";
-import { UserBadge } from "..";
+import { Chronometer, UserBadge } from "..";
 import { AuthorProps } from "../../../interfaces";
 
 interface Props {
@@ -10,23 +9,14 @@ interface Props {
     _createdAt: Date;
 }
 
-export const PostSidebar = ({
-    author,
-    tags,
-    showIndexes,
-    _createdAt,
-}: Props) => {
-    const styles = clsx({
-        ["sticky top-0"]: !showIndexes,
-        ["relative"]: showIndexes,
-    });
-
+export const PostSidebar = ({ author, tags, _createdAt }: Props) => {
     return (
         <aside
             className={`hidden md:block p-10 pt-20 border-l border-l-v-border h-screen min-h-full sticky top-0`}
         >
             <div className="flex flex-col min-h-[80vh]">
                 <div className="flex-1">
+                    <Chronometer />
                     {tags?.length > 0 && (
                         <div className="flex flex-wrap mt-4">
                             {tags?.map((label) => (
