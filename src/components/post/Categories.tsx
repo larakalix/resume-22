@@ -7,7 +7,7 @@ import { EmblaCarousel } from "../generic/carousel/Carousel";
 
 export const Categories = ({ categories }: { categories: CategoryProps[] }) => {
     return (
-        <div className="w-full md:w-[320px] flex-shrink-0 max-w-full md:max-w-[20vw] h-auto md:h-[100vh] min-h-full">
+        <div className="w-full md:w-[320px] flex-shrink-0 max-w-full md:max-w-[20vw] h-auto md:h-[100vh] min-h-full sticky top-0 border-r border-v-border">
             <DesktopLinks categories={categories} />
             <MobileLinks categories={categories} />
         </div>

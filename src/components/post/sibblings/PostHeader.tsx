@@ -35,7 +35,7 @@ export const PostHeader = ({
 
     const content = (
         <>
-            <div className="max-w-[70rem] m-auto">
+            <div className="max-w-xl m-auto">
                 <div className="bg-bullet text-white inline py-2 px-4 rounded-full font-light whitespace-nowrap text-v-small">
                     {categories
                         ?.map(({ title }: CategoryProps) => title)
@@ -45,7 +45,7 @@ export const PostHeader = ({
                     Published {formatDistanceToNow(new Date(_createdAt))} ago
                 </span>
             </div>
-            <h1 className="text-white text-[2rem] md:text-v-single-post-title tracking-[-.04em] leading-none font-bold mt-8 max-w-[70rem] m-auto">
+            <h1 className="text-white text-[2rem] md:text-v-single-post-title tracking-[-.04em] leading-none font-bold mt-8 max-w-xl m-auto">
                 {title}
             </h1>
         </>

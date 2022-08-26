@@ -27,7 +27,7 @@ export const PostContent = ({
     return (
         // <div className="grid grid-cols-[minmax(0,1fr)_340px] w-full max-w-[100vw] items-start">
         <div className="flex items-start justify-center w-full max-w-[100vw]">
-            <article className="w-full md:w-3/4 p-6 md:p-20 md:pl-10 max-w-[70rem]">
+            <article className="w-full md:w-3/4 p-6 md:p-20 md:pl-10 max-w-xl">
                 {showIndexes && <IndexesTable body={indexes} />}
                 <div className="block md:hidden mt-4Ç">
                     <UserBadge {...author} />
