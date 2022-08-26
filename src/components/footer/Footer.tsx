@@ -7,7 +7,7 @@ export const Footer = () => {
                     href="https://twitter.com/KalixTheMan"
                     className="font-montserrat font-bold"
                 >
-                    Ivan Lara 👨‍💻
+                    Ivan Lara 👨‍💻 {new Date().getFullYear()}
                 </a>
             </p>
         </div>

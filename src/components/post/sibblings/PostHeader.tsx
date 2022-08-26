@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { formatDistanceToNow } from "date-fns";
 import styled from "styled-components";
 import {
@@ -8,7 +9,6 @@ import {
 import { urlFor } from "../../../../sanity/builder";
 
 const Header = styled.div<GenericBgImageProps>`
-    background-image: url("${(p: GenericBgImageProps) => p.url}");
     background-image: linear-gradient(
             90deg,
             rgb(var(--gradient-from, 85 85 85) / 0.2) 0,
@@ -25,6 +25,14 @@ export const PostHeader = ({
     categories,
     _createdAt,
 }: PostProps) => {
+    const [hasWindow, setHasWindow] = useState(false);
+
+    useEffect(() => {
+        if (typeof window !== "undefined") setHasWindow(true);
+    }, []);
+
+    if (!hasWindow) return;
+
     const content = (
         <>
             <div>
