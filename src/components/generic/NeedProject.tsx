@@ -27,7 +27,7 @@ export const NeedProject = () => {
                                 href={route}
                                 target="_blank"
                                 rel="noreferrer"
-                                className="font-montserrat text-white dark:text-v-blue hover:bg-[rgba(0,118,255,.1)] dark:hover:bg-red px-2 py-1 rounded-md"
+                                className="font-montserrat text-white dark:text-v-blue hover:bg-[rgba(0,118,255,.1)] dark:hover:bg-red px-2 py-1 rounded-v-rounded"
                             >
                                 {label}
                             </a>

@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
-import { HiMenuAlt3 } from "react-icons/hi";
+import { HiMenuAlt3, HiX } from "react-icons/hi";
 import clsx from "clsx";
 import { links } from "../../data/data";
 import { Brand } from "./Brand";
@@ -8,6 +8,9 @@ import { DesktopMenu } from "./DesktopMenu";
 import { MobileMenu } from "./MobileMenu";
 import { ThemeSelector } from "./ThemeSelector";
 import { HeaderLinkProps } from "../../interfaces";
+import { HeaderLink } from "./HeaderLink";
+
+import styles from "./styles/Nav.module.css";
 
 interface Props {
     links: HeaderLinkProps[];
@@ -38,7 +41,7 @@ export const Header = () => {
         }
     }, [lastScrollY]);
 
-    const styles = clsx({
+    const topBarStyles = clsx({
         ["bg-[rgb(255, 255, 255, .85)] backdrop-blur-sm py-4"]:
             lastScrollY > 100,
     });
@@ -47,13 +50,37 @@ export const Header = () => {
         <div
             className={`w-full sticky top-0 ${
                 hide ? "opacity-0" : "opacity-100"
-            } transition-all ${styles} px-8 py-8`}
+            } transition-all ${topBarStyles} px-8 py-8 z-10`}
         >
-            <div
+            <nav id="nav" className={styles.nav}>
+                <Brand className={styles.nav__logo} />
+
+                <ul className={styles.nav__links}>
+                    {links.map(({ label, ...props }) => (
+                        <HeaderLink key={label} {...{ label, ...props }} />
+                    ))}
+                    <li className="hidden md:block">
+                        <ThemeSelector />
+                    </li>
+                </ul>
+
+                <div className="flex justify-end flex-row-reverse md:flex-row">
+                    <a href="#nav" className={styles.nav__burger}>
+                        <HiMenuAlt3 className={styles.nav__icon} />
+                    </a>
+
+                    <a href="#nonav" className={styles.nav__close}>
+                        <HiX className={styles.nav__icon} />
+                    </a>
+
+                    <div className="block md:hidden">
+                        <ThemeSelector />
+                    </div>
+                </div>
+            </nav>
+            {/*  <div
                 className={`flex items-center justify-between flex-row md:max-w-5xl lg:max-w-7xl m-auto`}
             >
-                <Brand />
-
                 <div className="flex items-center justify-center">
                     <div>
                         <div className="flex md:hidden">
@@ -74,7 +101,7 @@ export const Header = () => {
                     </div>
                     <ThemeSelector />
                 </div>
-            </div>
+            </div>  */}
         </div>
     );
 };

@@ -2,12 +2,18 @@ import Link from "next/link";
 import Image from "next/image";
 import { useDateInfo } from "../../hooks/useDateInfo";
 
-export const Brand = () => {
+interface Props {
+    className: string;
+}
+
+export const Brand = ({ className }: Props) => {
     const { isXmas } = useDateInfo();
 
     return (
         <Link href="/">
-            <a className="font-bold text-[2rem] bg-black text-white px-2 rounded dark:bg-white dark:text-black relative cursor-default">
+            <a
+                className={`font-bold text-[2rem] bg-black text-white px-2 rounded dark:bg-white dark:text-black relative cursor-default ${className}`}
+            >
                 KTD
                 {isXmas() ? (
                     <div className="absolute top-[-1.5rem] left-[-1.5rem]">

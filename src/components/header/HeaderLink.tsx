@@ -16,7 +16,6 @@ export const HeaderLink = ({
     isOnMobile = false,
 }: HeaderLinkProps) => {
     const { pathname, push } = useRouter();
-    const hash = typeof window !== "undefined" ? window.location.hash : "";
 
     const styles = clsx({
         ["text-v-blue mx-2 dark:bg-white dark:text-black"]:
@@ -41,7 +40,7 @@ export const HeaderLink = ({
                 href={anker ? `#${anker}` : "#!"}
                 className={`${
                     highlight ? hlStyles : styles
-                } font-normal px-4 py-2 rounded`}
+                } text-[1rem] md:text-[0.875rem] font-normal px-4 py-2 rounded-v-rounded`}
                 onClick={() => handleClick()}
             >
                 {label}

@@ -17,7 +17,7 @@ export const Post = ({
                     <h2 className="text-black dark:text-white font-bold max-w-2xl text-[1.2rem] md:text-[2rem] leading-none">
                         {title}
                     </h2>
-                    <div className="flex items-center justify-between mt-12">
+                    <div className="flex items-start sm-center gap-4 sm:gap-[unset] justify-between flex-col sm:flex-row mt-12">
                         <div className="flex text-v-gray font-light text-v-small">
                             <div className="flex flex-wrap justify-start items-center">
                                 <CircleAuthor

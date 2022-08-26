@@ -13,7 +13,7 @@ export const Skills = ({ skills }: HomePageProps) => {
                 {skills?.map(({ _id: id, name, description }: SkillsProps) => (
                     <motion.div
                         key={id}
-                        className="flex justify-start items-center flex-col p-6 rounded hover:bg-white dark:hover:bg-blue-500 transition-colors"
+                        className="flex justify-start items-center flex-col p-6 rounded-v-rounded hover:bg-white dark:hover:bg-blue-500 transition-colors"
                         initial={{ padding: "1rem" }}
                         animate={{
                             padding: "1.5rem",

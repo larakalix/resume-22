@@ -4,7 +4,7 @@ import { Title } from "../generic/Title";
 import { TitleSize } from "../../interfaces/TitleProps";
 
 export const Project = ({ name, github, link }: ProjectProps) => (
-    <div className="w-full h-[20rem] flex justify-center items-center bg-blue-200 dark:bg-purple-300 rounded flex-col">
+    <div className="w-full h-[20rem] flex justify-center items-center bg-blue-200 dark:bg-purple-300 rounded-v-rounded flex-col">
         <Title
             title={name}
             inverted={false}
@@ -17,7 +17,7 @@ export const Project = ({ name, github, link }: ProjectProps) => (
                     href={link}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center justify-center w-[4rem] h-[4rem] bg-blue-500 text-white min-h-[4rem] mx-2 rounded"
+                    className="flex items-center justify-center w-[4rem] h-[4rem] bg-blue-500 text-white min-h-[4rem] mx-2 rounded-v-rounded"
                 >
                     <RiLinkM className="text-[1.8rem]" />
                 </a>
@@ -33,7 +33,7 @@ const GithubButton = ({ github }: { github: string }) => (
             href={github}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center justify-center w-[4rem] h-[4rem] bg-black text-white text-xl min-h-[4rem] mx-2 rounded"
+            className="flex items-center justify-center w-[4rem] h-[4rem] bg-black text-white text-xl min-h-[4rem] mx-2 rounded-v-rounded"
         >
             <RiGithubFill className="text-white text-[1.8rem]" />
         </a>
