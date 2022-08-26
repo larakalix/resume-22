@@ -45,7 +45,7 @@ export const PostHeader = ({
                     Published {formatDistanceToNow(new Date(_createdAt))} ago
                 </span>
             </div>
-            <h1 className="text-white text-[2rem] md:text-v-single-post-title tracking-[-.04em] leading-none font-bold mt-8 max-w-[70rem]">
+            <h1 className="text-white text-[2rem] md:text-v-single-post-title tracking-[-.04em] leading-none font-bold mt-8 max-w-[70rem] m-auto">
                 {title}
             </h1>
         </>
