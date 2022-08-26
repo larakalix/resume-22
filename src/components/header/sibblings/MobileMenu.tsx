@@ -1,8 +1,8 @@
 import { HiX } from "react-icons/hi";
-import { HeaderLinkProps } from "../../interfaces/HeaderLinkProps";
+import { HeaderLinkProps } from "../../../interfaces/HeaderLinkProps";
 import { HeaderLink } from "./HeaderLink";
 import { motion } from "framer-motion";
-import { mobile_menu_config } from "../../configs/FramerMotion";
+import { mobile_menu_config } from "../../../configs/FramerMotion";
 
 interface Props {
     links: HeaderLinkProps[];
