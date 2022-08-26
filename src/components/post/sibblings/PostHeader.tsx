@@ -31,7 +31,7 @@ export const PostHeader = ({
         if (typeof window !== "undefined") setHasWindow(true);
     }, []);
 
-    if (!hasWindow) return;
+    if (!hasWindow) return null;
 
     const content = (
         <>
