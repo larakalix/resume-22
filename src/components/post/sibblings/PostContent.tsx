@@ -47,6 +47,7 @@ export const PostContent = ({
                 tags={tags}
                 showIndexes={showIndexes}
                 _createdAt={_createdAt}
+                showTimer={false}
             />
         </div>
     );
