@@ -7,16 +7,22 @@ interface Props {
     tags: string[];
     showIndexes: boolean;
     _createdAt: Date;
+    showTimer?: boolean;
 }
 
-export const PostSidebar = ({ author, tags, _createdAt }: Props) => {
+export const PostSidebar = ({
+    author,
+    tags,
+    _createdAt,
+    showTimer = false,
+}: Props) => {
     return (
         <aside
             className={`block md:block p-10 pt-20 border-l border-l-v-border h-auto md:h-screen md:min-h-full relative md:sticky top-0`}
         >
             <div className="flex flex-col min-h-fit md:min-h-[80vh]">
                 <div className="flex-1">
-                    <Chronometer />
+                    {showTimer && <Chronometer />}
                     {tags?.length > 0 && (
                         <div className="flex flex-wrap mt-4">
                             {tags?.map((label) => (

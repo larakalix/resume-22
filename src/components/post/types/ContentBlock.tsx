@@ -2,12 +2,16 @@ import dynamic from "next/dynamic";
 import { HeadingTag, PiecesTag } from "../../../enums";
 import { Body } from "../../../interfaces/PostProps";
 
-const PTag = dynamic(() => import("../../generic").then((m) => m.Paragraph));
-const HeadTag = dynamic(() => import("../../generic").then((m) => m.Header));
-const QuoteTag = dynamic(() =>
+const PTag = dynamic<any>(() =>
+    import("../../generic").then((m) => m.Paragraph)
+);
+const HeadTag = dynamic<any>(() =>
+    import("../../generic").then((m) => m.Header)
+);
+const QuoteTag = dynamic<any>(() =>
     import("../../generic").then((m) => m.Blockquote)
 );
-const ATag = dynamic(() =>
+const ATag = dynamic<any>(() =>
     import("./ContentIndex").then((m) => m.ContentIndex)
 );
 

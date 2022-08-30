@@ -2,11 +2,13 @@ import dynamic from "next/dynamic";
 import { PieceType } from "../../enums";
 import { Body } from "../../interfaces";
 
-const Block = dynamic(() => import(".").then((m) => m.ContentBlock));
-const Code = dynamic(() => import(".").then((m) => m.ContentCode));
-const CtImage = dynamic(() => import(".").then((m) => m.ContentImage));
-const Shortcode = dynamic(() => import(".").then((m) => m.ContentShortcode));
-const Video = dynamic(() => import(".").then((m) => m.ContentVideo));
+const Block = dynamic<any>(() => import(".").then((m) => m.ContentBlock));
+const Code = dynamic<any>(() => import(".").then((m) => m.ContentCode));
+const CtImage = dynamic<any>(() => import(".").then((m) => m.ContentImage));
+const Shortcode = dynamic<any>(() =>
+    import(".").then((m) => m.ContentShortcode)
+);
+const Video = dynamic<any>(() => import(".").then((m) => m.ContentVideo));
 
 interface TypeProps {
     [key: string]: JSX.Element;
