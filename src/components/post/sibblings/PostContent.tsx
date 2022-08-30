@@ -40,9 +40,6 @@ export const PostContent = ({
                 {relatedPosts?.length > 0 && (
                     <RelatedPosts posts={relatedPosts} />
                 )}
-                {/* <div className="block md:hidden mt-4">
-                    <UserBadge {...author} />
-                </div> */}
                 {showNewsletter && <Newsletter />}
             </article>
             <PostSidebar
