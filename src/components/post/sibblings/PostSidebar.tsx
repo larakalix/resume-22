@@ -12,9 +12,9 @@ interface Props {
 export const PostSidebar = ({ author, tags, _createdAt }: Props) => {
     return (
         <aside
-            className={`hidden md:block p-10 pt-20 border-l border-l-v-border h-screen min-h-full sticky top-0`}
+            className={`block md:block p-10 pt-20 border-l border-l-v-border h-auto md:h-screen md:min-h-full relative md:sticky top-0`}
         >
-            <div className="flex flex-col min-h-[80vh]">
+            <div className="flex flex-col min-h-fit md:min-h-[80vh]">
                 <div className="flex-1">
                     <Chronometer />
                     {tags?.length > 0 && (
@@ -29,7 +29,7 @@ export const PostSidebar = ({ author, tags, _createdAt }: Props) => {
                     )}
                     <UserBadge {...author} />
                 </div>
-                <span className="text-v-small text-v-gray font-light capitalize block mb-4">
+                <span className="text-v-small text-v-gray font-light capitalize block my-4">
                     Published {formatDistanceToNow(new Date(_createdAt))} ago
                 </span>
             </div>

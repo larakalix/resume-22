@@ -30,7 +30,6 @@ export const Post = ({
                                 <span className="text-[0.8rem] block capitalize">
                                     {formatDistanceToNow(new Date(publishedAt))}{" "}
                                     ago
-                                    {/* {new Date(publishedAt).toDateString()} */}
                                 </span>
                             </div>
                         </div>

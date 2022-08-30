@@ -37,7 +37,7 @@ export const Header = ({
     return (
         <div className="relative flex items-center">
             {allowedTypes.includes(type) && (
-                <span className="absolute right-[-5.6rem] text-[2rem] hidden md:block">
+                <span className="absolute right-[-7%] text-[2rem] hidden md:block">
                     <AiFillCaretLeft className="text-black dark:text-v-border" />
                 </span>
             )}

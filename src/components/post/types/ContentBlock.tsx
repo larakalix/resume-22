@@ -1,7 +1,15 @@
+import dynamic from "next/dynamic";
 import { HeadingTag, PiecesTag } from "../../../enums";
 import { Body } from "../../../interfaces/PostProps";
-import { Blockquote, Header, Paragraph } from "../../generic";
-import { ContentIndex } from "./ContentIndex";
+
+const PTag = dynamic(() => import("../../generic").then((m) => m.Paragraph));
+const HeadTag = dynamic(() => import("../../generic").then((m) => m.Header));
+const QuoteTag = dynamic(() =>
+    import("../../generic").then((m) => m.Blockquote)
+);
+const ATag = dynamic(() =>
+    import("./ContentIndex").then((m) => m.ContentIndex)
+);
 
 export const ContentBlock = ({
     _key,
@@ -13,10 +21,10 @@ export const ContentBlock = ({
 
     const elements: { [key: string]: JSX.Element } = {
         [PiecesTag.Normal]: (
-            <Paragraph _key={_key} text={text} markDefs={markDefs} />
+            <PTag _key={_key} text={text} markDefs={markDefs} />
         ),
         [PiecesTag.H2]: (
-            <Header
+            <HeadTag
                 _key={_key}
                 text={text}
                 type={style as HeadingTag}
@@ -24,7 +32,7 @@ export const ContentBlock = ({
             />
         ),
         [PiecesTag.H4]: (
-            <Header
+            <HeadTag
                 _key={_key}
                 text={text}
                 type={style as HeadingTag}
@@ -32,14 +40,14 @@ export const ContentBlock = ({
             />
         ),
         [PiecesTag.Blockqoute]: (
-            <Blockquote
+            <QuoteTag
                 _key={_key}
                 text={text}
                 className="text-black dark:text-white"
             />
         ),
         [PiecesTag.Link]: (
-            <ContentIndex
+            <ATag
                 _key={_key}
                 text={text}
                 className="text-black hover:text-v-blue font-bold text-[1.125rem] transition-colors"

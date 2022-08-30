@@ -26,12 +26,9 @@ export const PostContent = ({
 
     return (
         // <div className="grid grid-cols-[minmax(0,1fr)_340px] w-full max-w-[100vw] items-start">
-        <div className="flex items-start justify-center w-full max-w-[100vw]">
-            <article className="w-full md:w-3/4 p-6 md:p-8 md:pl-10 max-w-xl">
+        <div className="flex items-start justify-center w-full max-w-[100vw] flex-col md:flex-row">
+            <article className="w-full md:w-3/4 p-6 md:p-8 md:pl-10 max-w-2xl">
                 {showIndexes && <IndexesTable body={indexes} />}
-                <div className="block md:hidden mt-4Ç">
-                    <UserBadge {...author} />
-                </div>
                 {body?.map(({ _key, _type, ...props }) => (
                     <BlockType key={_key} {...{ _key, _type, ...props }} />
                 ))}
@@ -43,6 +40,9 @@ export const PostContent = ({
                 {relatedPosts?.length > 0 && (
                     <RelatedPosts posts={relatedPosts} />
                 )}
+                {/* <div className="block md:hidden mt-4">
+                    <UserBadge {...author} />
+                </div> */}
                 {showNewsletter && <Newsletter />}
             </article>
             <PostSidebar

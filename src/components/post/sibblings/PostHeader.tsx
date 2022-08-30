@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { formatDistanceToNow } from "date-fns";
 import styled from "styled-components";
 import {
@@ -37,9 +38,15 @@ export const PostHeader = ({
         <>
             <div className="max-w-4xl m-auto">
                 <div className="bg-bullet text-white inline py-2 px-4 rounded-full font-light whitespace-nowrap text-v-small">
-                    {categories
-                        ?.map(({ title }: CategoryProps) => title)
-                        .join(", ")}
+                    <Link href="/b">
+                        <a>
+                            Blog
+                            {" > "}
+                            {categories
+                                ?.map(({ title }: CategoryProps) => title)
+                                .join(", ")}
+                        </a>
+                    </Link>
                 </div>
                 <span className="text-v-small text-white font-light ml-3 capitalize">
                     Published {formatDistanceToNow(new Date(_createdAt))} ago

@@ -1,12 +1,12 @@
-import {
-    ContentBlock,
-    ContentCode,
-    ContentImage,
-    ContentShortcode,
-    ContentVideo,
-} from ".";
+import dynamic from "next/dynamic";
 import { PieceType } from "../../enums";
 import { Body } from "../../interfaces";
+
+const Block = dynamic(() => import(".").then((m) => m.ContentBlock));
+const Code = dynamic(() => import(".").then((m) => m.ContentCode));
+const CtImage = dynamic(() => import(".").then((m) => m.ContentImage));
+const Shortcode = dynamic(() => import(".").then((m) => m.ContentShortcode));
+const Video = dynamic(() => import(".").then((m) => m.ContentVideo));
 
 interface TypeProps {
     [key: string]: JSX.Element;
@@ -14,11 +14,11 @@ interface TypeProps {
 
 export const BlockType = ({ _type, ...props }: Body) => {
     const types: TypeProps = {
-        [PieceType.Block]: <ContentBlock _type={_type} {...props} />,
-        [PieceType.Image]: <ContentImage _type={_type} {...props} />,
-        [PieceType.Code]: <ContentCode _type={_type} {...props} />,
-        [PieceType.Youtube]: <ContentVideo _type={_type} {...props} />,
-        [PieceType.Shortcode]: <ContentShortcode />,
+        [PieceType.Block]: <Block _type={_type} {...props} />,
+        [PieceType.Image]: <CtImage _type={_type} {...props} />,
+        [PieceType.Code]: <Code _type={_type} {...props} />,
+        [PieceType.Youtube]: <Video _type={_type} {...props} />,
+        [PieceType.Shortcode]: <Shortcode />,
     };
 
     return types[_type];
