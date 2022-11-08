@@ -1,8 +1,7 @@
-import { AiFillCaretLeft } from "react-icons/ai";
+import { useRef } from "react";
 import { HeadingTag } from "../../enums";
+import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import { GenericTagWtTypeProps } from "../../interfaces/GenericProps";
-
-const allowedTypes = [HeadingTag.H1, HeadingTag.H2];
 
 export const Header = ({
     _key,
@@ -10,15 +9,20 @@ export const Header = ({
     className,
     type = HeadingTag.H1,
 }: GenericTagWtTypeProps) => {
+    const ref = useRef<HTMLDivElement | null>(null);
+    const entry = useIntersectionObserver(ref, {});
+    const isVisible = !!entry?.isIntersecting;
+
     const key = `${_key}_header`;
+
     const heading = {
         [HeadingTag.H1]: (
-            <h2 id={key} className={className}>
+            <h2 id={key} ref={ref} className={className}>
                 {text}
             </h2>
         ),
         [HeadingTag.H2]: (
-            <h2 id={key} className={className}>
+            <h2 id={key} ref={ref} className={className}>
                 {text}
             </h2>
         ),
@@ -34,14 +38,5 @@ export const Header = ({
         ),
     };
 
-    return (
-        <div className="relative flex items-center">
-            {allowedTypes.includes(type) && (
-                <span className="absolute right-[-7%] text-[2rem] hidden md:block">
-                    <AiFillCaretLeft className="text-black dark:text-v-border" />
-                </span>
-            )}
-            {heading[type]}
-        </div>
-    );
+    return <div className={`relative flex items-center`}>{heading[type]}</div>;
 };

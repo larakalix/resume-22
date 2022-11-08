@@ -1,9 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import type { GetServerSidePropsContext } from "next";
 import Head from "next/head";
-import client from "../sanity/client";
+import { getLinks } from "../src/api/links/getLinks";
+import { getPosts } from "../src/api/posts/getPosts";
+import { getSkills } from "../src/api/skills/getSkills";
 import ContactWrap from "../src/components/generic/ContactWrap";
-import { useDateInfo } from "../src/hooks/useDateInfo";
 import { HeaderLinkProps } from "../src/interfaces";
 import { HomePageProps } from "../src/interfaces/pages/HomeProps";
 import { HomeScreen } from "../src/pages";
@@ -13,11 +14,7 @@ interface Props extends HomePageProps {
     notFound: boolean;
 }
 
-const Home = ({ links, skills, notFound }: Props) => {
-    const { weekDay } = useDateInfo();
-
-    const day = weekDay();
-
+const Home = ({ skills, posts, notFound }: Props) => {
     if (notFound)
         return (
             <div className="w-full h-screen flex items-center justify-center">
@@ -28,9 +25,10 @@ const Home = ({ links, skills, notFound }: Props) => {
     return (
         <ContactWrap>
             <Head>
-                <title>Hello stranger, happy {day ?? "day"}!</title>
+                <title>Hello stranger!</title>
             </Head>
-            <HomeScreen skills={skills} />
+
+            <HomeScreen posts={posts} skills={skills} />
         </ContactWrap>
     );
 };
@@ -38,11 +36,9 @@ const Home = ({ links, skills, notFound }: Props) => {
 export const getServerSideProps = async ({
     req,
 }: GetServerSidePropsContext) => {
-    const links_query = `*[ _type == "headerLink"]`;
-    const links = await client.fetch(links_query);
-
-    const skills_query = `*[ _type == "skills"]`;
-    const skills = await client.fetch(skills_query);
+    const links = await getLinks();
+    const skills = await getSkills();
+    const posts = await getPosts({ slice: 3 });
 
     if (!skills) return { props: null, notFound: true };
 
@@ -50,6 +46,7 @@ export const getServerSideProps = async ({
         props: {
             links,
             skills,
+            posts,
             notFound: false,
         },
     };

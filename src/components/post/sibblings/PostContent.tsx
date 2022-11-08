@@ -48,6 +48,7 @@ export const PostContent = ({
                 showIndexes={showIndexes}
                 _createdAt={_createdAt}
                 showTimer={false}
+                indexes={indexes}
             />
         </div>
     );

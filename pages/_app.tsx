@@ -8,6 +8,7 @@ import { ToastProvider } from "react-toast-notifications";
 import { Footer, Header } from "../src/components";
 import ThemeContext from "../src/context/ThemeContext";
 import useTheme from "../src/hooks/useTheme";
+import Script from "next/script";
 
 Router.events.on("routeChangeStart", () => NProgress.set(0.5));
 Router.events.on("routeChangeComplete", () => NProgress.done());
@@ -30,15 +31,13 @@ function MyApp({ Component, pageProps }: AppProps) {
                 }}
             >
                 <div className={`${theme}`}>
-                    <Head>
-                        <link rel="shortcut icon" href="/favicon.png" />
-                        <script
-                            async
-                            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-                        />
-                        <script
-                            dangerouslySetInnerHTML={{
-                                __html: `
+                    <Script
+                        async
+                        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+                    />
+                    <script
+                        dangerouslySetInnerHTML={{
+                            __html: `
                                 window.dataLayer = window.dataLayer || [];
                                 function gtag(){dataLayer.push(arguments);}
                                 gtag('js', new Date());
@@ -46,10 +45,14 @@ function MyApp({ Component, pageProps }: AppProps) {
                                 page_path: window.location.pathname,
                                 });
                             `,
-                            }}
-                        />
+                        }}
+                    />
+
+                    <Head>
+                        <link rel="shortcut icon" href="/favicon.png" />
                     </Head>
-                    <div className="bg-gray-100 dark:bg-black scroll-smooth transition-colors">
+
+                    <div className="bg-gray-100 dark:bg-v-black scroll-smooth transition-colors">
                         <Header />
                         <AnimatePresence exitBeforeEnter>
                             <Component {...pageProps} />

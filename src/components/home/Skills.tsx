@@ -4,7 +4,7 @@ import { Title } from "../generic/Title";
 import { SkillsProps } from "../../interfaces/SkillsProps";
 import { HomePageProps } from "../../interfaces/pages/HomeProps";
 
-export const Skills = ({ skills }: HomePageProps) => {
+export const Skills = ({ skills }: Partial<HomePageProps>) => {
     return (
         <div className="w-full p-12 m-auto flex justify-center items-center flex-col">
             <Title title="Skills" inverted={false} className="mb-12" />

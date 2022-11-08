@@ -1,5 +1,7 @@
+import { PostProps } from "../PostProps";
 import { SkillsProps } from "../SkillsProps";
 
 export interface HomePageProps {
-    skills: SkillsProps[] | null;
+    skills: SkillsProps[];
+    posts: PostProps[];
 }

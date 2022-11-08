@@ -1,6 +1,7 @@
 import { formatDistanceToNow } from "date-fns";
-import { Chronometer, UserBadge } from "..";
+import { Chronometer, IndexesTable, UserBadge } from "..";
 import { AuthorProps } from "../../../interfaces";
+import { Body } from "../../../interfaces";
 
 interface Props {
     author: AuthorProps;
@@ -8,11 +9,14 @@ interface Props {
     showIndexes: boolean;
     _createdAt: Date;
     showTimer?: boolean;
+    indexes: Body[];
 }
 
 export const PostSidebar = ({
     author,
     tags,
+    showIndexes,
+    indexes,
     _createdAt,
     showTimer = false,
 }: Props) => {
@@ -35,6 +39,7 @@ export const PostSidebar = ({
                     )}
                     <UserBadge {...author} />
                 </div>
+                {showIndexes && <IndexesTable body={indexes} />}
                 <span className="text-v-small text-v-gray font-light capitalize block my-4">
                     Published {formatDistanceToNow(new Date(_createdAt))} ago
                 </span>

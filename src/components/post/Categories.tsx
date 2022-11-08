@@ -18,8 +18,12 @@ const DesktopLinks = ({ categories }: { categories: CategoryProps[] }) => {
     return (
         <ul className="mt-2 hidden md:block">
             <li key="all-posts">
-                <Link href={`/b`}>
-                    <a className="text-v-gray block px-2 py-4">All Posts</a>
+                <Link
+                    href={`/b`}
+                    passHref
+                    className="text-v-gray block px-2 py-4"
+                >
+                    All Posts
                 </Link>
             </li>
             {categories?.map(({ _key, title, slug }) => (
@@ -40,10 +44,12 @@ const MobileLinks = ({ categories }: { categories: CategoryProps[] }) => {
             <EmblaCarousel
                 slides={categories?.map(({ _key, title, slug }) => (
                     <div key={_key}>
-                        <Link href={`/b/category/${slug.current}`}>
-                            <a className="text-v-gray mr-3 select-none cursor-pointer transition-all">
-                                {title}
-                            </a>
+                        <Link
+                            href={`/b/category/${slug.current}`}
+                            passHref
+                            className="text-v-gray mr-3 select-none cursor-pointer transition-all"
+                        >
+                            {title}
                         </Link>
                     </div>
                 ))}
@@ -72,8 +78,12 @@ const CategoryLink = ({ title, slug: { current } }: CategoryProps) => {
 
     return (
         <li key={current}>
-            <Link href={`/b/category/${current}`}>
-                <a className={`block px-2 py-4 ${styles}`}>{title}</a>
+            <Link
+                href={`/b/category/${current}`}
+                passHref
+                className={`block px-2 py-4 ${styles}`}
+            >
+                {title}
             </Link>
         </li>
     );

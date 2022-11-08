@@ -6,6 +6,11 @@
 
 @import "./react-refractor/prism.css";
 
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 :root {
     font-size: 16px;
     --gradient-from: 235 54 127;

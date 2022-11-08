@@ -17,7 +17,7 @@ const THEME_OPTIONS: Props[] = [
 export const ThemeSelector = () => {
     return (
         <div className="ml-4 transition-all">
-            <ul className="flex items-center justify-center bg-black dark:bg-white p-2 rounded-full">
+            <ul className="flex items-center justify-center bg-v-black dark:bg-white p-2 rounded-full">
                 {THEME_OPTIONS.map(({ id, icon }: Props) => (
                     <ThemeIcon key={id} id={id} icon={icon} />
                 ))}
@@ -30,8 +30,8 @@ const ThemeIcon = ({ id, icon: IconComponent }: Props) => {
     const { theme, changeTheme } = useContext(ThemeContext);
 
     const styles = clsx({
-        ["bg-white text-black dark:bg-black dark:text-white"]: id === theme,
-        ["bg-black text-white dark:bg-white dark:text-black"]: id !== theme,
+        ["bg-white text-v-black dark:bg-v-black dark:text-white"]: id === theme,
+        ["bg-v-black text-white dark:bg-white dark:text-v-black"]: id !== theme,
     });
 
     return (

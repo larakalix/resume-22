@@ -2,7 +2,7 @@ export * from './BlockType';
 export * from './Categories';
 export * from './CircleAuthor';
 export * from './IndexesTable';
-export * from './Post';
+export * from '../generic/post/Post';
 export * from './Posts';
 export * from './RelatedPosts';
 export * from './sibblings/Chronometer';

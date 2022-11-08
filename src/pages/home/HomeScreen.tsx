@@ -4,8 +4,9 @@ import { Banner } from "../../components/home/Banner";
 import { Skills } from "../../components/home/Skills";
 import { LetsTalkButton } from "../../components/generic/LetsTalkButton";
 import { HomePageProps } from "../../interfaces/pages/HomeProps";
+import { LatestPost } from "../../components/home/LatestPost";
 
-export const HomeScreen = ({ skills }: HomePageProps) => {
+export const HomeScreen = ({ posts, skills }: Partial<HomePageProps>) => {
     return (
         <motion.div {...div_config}>
             <div
@@ -22,6 +23,8 @@ export const HomeScreen = ({ skills }: HomePageProps) => {
                 id="skills"
                 className="min-h-screen flex items-center justify-center flex-col"
             >
+                <LatestPost posts={posts} />
+
                 <Skills skills={skills} />
             </div>
         </motion.div>

@@ -1,6 +1,11 @@
 import { CategoryProps } from "./CategoryProps";
 import { Child, GenericDateProps } from "./GenericProps";
 
+export enum PostType {
+    Common,
+    Home,
+}
+
 export interface GenericPostProps extends GenericDateProps {
     _id: string;
     title: string;
@@ -21,6 +26,7 @@ export interface PostProps extends GenericPostProps {
     publishedAt: Date;
     relatedPosts: GenericPostProps[];
     banner?: Banner;
+    type?: PostType;
 }
 
 export interface Banner {

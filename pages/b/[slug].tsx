@@ -1,6 +1,7 @@
 import type { GetServerSidePropsContext } from "next";
 import Head from "next/head";
 import client from "../../sanity/client";
+import { getPost } from "../../src/api/posts/getPosts";
 import ContactWrap from "../../src/components/generic/ContactWrap";
 import { SinglePostPageProps } from "../../src/interfaces/pages/BlogPageProps";
 import { SinglePostScreen } from "../../src/pages/post/SinglePostScreen";
@@ -19,10 +20,7 @@ export const SinglePost = ({ post }: SinglePostPageProps) => {
 export const getServerSideProps = async ({
     query: { slug },
 }: GetServerSidePropsContext) => {
-    const query = `*[_type == "post" && slug.current == $slug][0]{
-        _id, _createdAt, title, body, banner, content, showNewsletter, showIndexes, relatedPosts[]->{_id,title,slug,_createdAt}, tags, categories[]->{_id,title}, author->{_id,name,image}
-    }`;
-    const result = await client.fetch(query, { slug });
+    const result = await getPost({ slug });
 
     return {
         props: {

@@ -39,13 +39,11 @@ export const PostHeader = ({
             <div className="max-w-4xl m-auto">
                 <div className="bg-bullet text-white inline py-2 px-4 rounded-full font-light whitespace-nowrap text-v-small">
                     <Link href="/b">
-                        <a>
-                            Blog
-                            {" > "}
-                            {categories
-                                ?.map(({ title }: CategoryProps) => title)
-                                .join(", ")}
-                        </a>
+                        Blog
+                        {" > "}
+                        {categories
+                            ?.map(({ title }: CategoryProps) => title)
+                            .join(", ")}
                     </Link>
                 </div>
                 <span className="text-v-small text-white font-light ml-3 capitalize">

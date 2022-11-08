@@ -1,7 +1,7 @@
 import { HeadingTag } from "../../enums";
 import { PostProps } from "../../interfaces/PostProps";
 import { Header } from "../generic";
-import { Post } from "./Post";
+import { Post } from "../generic/post/Post";
 
 interface Props {
     posts: PostProps[];
