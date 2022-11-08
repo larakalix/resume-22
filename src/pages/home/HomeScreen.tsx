@@ -11,7 +11,7 @@ export const HomeScreen = ({ posts, skills }: Partial<HomePageProps>) => {
         <motion.div {...div_config}>
             <div
                 id="Welcome"
-                className="min-h-[80vh] flex items-center justify-center flex-col"
+                className="min-h-[80vh] flex items-center justify-center flex-col w-full m-auto md:max-w-5xl lg:max-w-7xl"
             >
                 <Banner />
 
@@ -21,7 +21,7 @@ export const HomeScreen = ({ posts, skills }: Partial<HomePageProps>) => {
             </div>
             <div
                 id="skills"
-                className="min-h-screen flex items-center justify-center flex-col"
+                className="min-h-screen flex items-center justify-center flex-col w-full m-auto md:max-w-5xl lg:max-w-7xl"
             >
                 <LatestPost posts={posts} />
 

@@ -15,7 +15,7 @@ export const LatestPost = ({ posts }: Partial<HomePageProps>) => {
 
 const PostLinks = ({ posts }: { posts: PostProps[] }) => {
     return (
-        <div className="grid grid-cols-2 w-full mb-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 w-full mb-2">
             {/* <EmblaCarousel
                 slides={posts?.map(({ _id, ...props }) => (
                     <Post
