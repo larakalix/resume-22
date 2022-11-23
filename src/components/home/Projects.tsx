@@ -6,7 +6,6 @@ import { HomePageProps, ProjectProps } from "../../interfaces";
 import { Title } from "../generic";
 
 export const Projects = ({ projects }: Pick<HomePageProps, "projects">) => {
-    console.log(projects);
     return (
         <div className="w-full p-12 m-auto flex justify-center items-center flex-col">
             <Title title="Projects" inverted={false} className="mb-12" />
