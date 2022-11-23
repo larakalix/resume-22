@@ -62,7 +62,10 @@ function MyApp({ Component, pageProps }: AppProps) {
                             property="og:description"
                             content="I'm Ivan Lara, I build digital products based on your business needs."
                         />
-                        <meta property="og:image" content="./preview.png" />
+                        <meta
+                            property="og:image"
+                            content="https://www.kalixthedev.com/preview.png"
+                        />
 
                         <link rel="shortcut icon" href="/favicon.png" />
                     </Head>
