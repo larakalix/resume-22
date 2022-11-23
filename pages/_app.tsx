@@ -49,6 +49,21 @@ function MyApp({ Component, pageProps }: AppProps) {
                     />
 
                     <Head>
+                        <meta
+                            property="og:url"
+                            content="https://www.kalixthedev.com"
+                        />
+                        <meta property="og:type" content="website" />
+                        <meta
+                            property="og:title"
+                            content="Fullstack Developer based in Nicaragua"
+                        />
+                        <meta
+                            property="og:description"
+                            content="I'm Ivan Lara, I build digital products based on your business needs."
+                        />
+                        <meta property="og:image" content="./preview.png" />
+
                         <link rel="shortcut icon" href="/favicon.png" />
                     </Head>
 
