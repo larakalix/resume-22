@@ -18,24 +18,14 @@ export const Projects = ({ projects }: Pick<HomePageProps, "projects">) => {
                     <Link
                         href="/projects"
                         passHref
-                        className="border-v-border border rounded-v-rounded flex items-center justify-center hover:opacity-75"
+                        className="border-v-border border rounded-v-rounded flex items-center justify-center hover:opacity-60"
                     >
-                        <span className="text-white px-2 mt-8">
+                        <span className="text-black dark:text-white px-2 mt-8">
                             More projects
                         </span>
                     </Link>
                 )}
             </div>
-
-            {/* {projects.length > 0 && (
-                <Link
-                    href="/projects"
-                    passHref
-                    className="text-white px-2 mt-8"
-                >
-                    <span>More projects</span>
-                </Link>
-            )} */}
         </div>
     );
 };
