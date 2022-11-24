@@ -10,21 +10,32 @@ export const Projects = ({ projects }: Pick<HomePageProps, "projects">) => {
         <div className="w-full p-12 m-auto flex justify-center items-center flex-col">
             <Title title="Projects" inverted={false} className="mb-12" />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full mb-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 md:gap-4 xl:gap-2 w-full mb-2">
                 {projects?.map(({ _id, ...props }) => (
                     <Project key={_id} {...{ _id, ...props }} />
                 ))}
+                {projects.length > 0 && (
+                    <Link
+                        href="/projects"
+                        passHref
+                        className="border-v-border border rounded-v-rounded flex items-center justify-center hover:opacity-75"
+                    >
+                        <span className="text-white px-2 mt-8">
+                            More projects
+                        </span>
+                    </Link>
+                )}
             </div>
 
-            {projects.length > 0 && (
+            {/* {projects.length > 0 && (
                 <Link
                     href="/projects"
                     passHref
                     className="text-white px-2 mt-8"
                 >
-                    More projects
+                    <span>More projects</span>
                 </Link>
-            )}
+            )} */}
         </div>
     );
 };
@@ -32,7 +43,7 @@ export const Projects = ({ projects }: Pick<HomePageProps, "projects">) => {
 const Project = ({ name, link, github, banner }: ProjectProps) => {
     return (
         <div className="p-8 border-v-border border rounded-v-rounded bg-white dark:bg-black">
-            <h2 className="text-black dark:text-white font-bold max-w-2xl text-[1.2rem] md:text-[2rem] leading-noneƒ">
+            <h2 className="text-black dark:text-white font-bold max-w-2xl text-[1.8rem] md:text-[2rem] xl:text-[1.2rem] leading-noneƒ">
                 {name}
             </h2>
 
