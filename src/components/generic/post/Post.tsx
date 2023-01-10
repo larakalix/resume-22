@@ -17,7 +17,7 @@ export const Post = ({
 
     return (
         <div
-            className={`${boxStyles} p-8 border-v-border border rounded-v-rounded bg-white dark:bg-black`}
+            className={`${boxStyles} p-8 border-v-border border rounded-v-rounded bg-white dark:bg-black hover:opacity-90`}
         >
             <Link href={`/b/${slug.current}`} passHref>
                 <h2

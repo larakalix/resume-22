@@ -53,7 +53,7 @@ const Project = ({ name, link, github, banner }: ProjectProps) => {
                         href={link}
                         target="_blank"
                         rel="noreferrer"
-                        className="flex items-center justify-center w-[4rem] h-[4rem] bg-blue-500 text-white min-h-[4rem] rounded-v-rounded"
+                        className="flex items-center justify-center w-[4rem] h-[4rem] bg-blue-500 text-white min-h-[4rem] rounded-v-rounded hover:opacity-90"
                     >
                         <RiLinkM className="text-[1.8rem]" />
                     </a>
@@ -64,7 +64,7 @@ const Project = ({ name, link, github, banner }: ProjectProps) => {
                             href={github}
                             target="_blank"
                             rel="noreferrer"
-                            className="flex items-center justify-center w-[4rem] h-[4rem] bg-black text-white text-xl min-h-[4rem] rounded-v-rounded invert"
+                            className="flex items-center justify-center w-[4rem] h-[4rem] bg-black text-white text-xl min-h-[4rem] rounded-v-rounded invert hover:opacity-90"
                         >
                             <RiGithubFill className="text-white text-[1.8rem]" />
                         </a>

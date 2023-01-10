@@ -21,7 +21,7 @@ const DesktopLinks = ({ categories }: { categories: CategoryProps[] }) => {
                 <Link
                     href={`/b`}
                     passHref
-                    className="text-v-gray block px-2 py-4"
+                    className="text-v-gray block px-2 py-4 hover:opacity-90"
                 >
                     All Posts
                 </Link>
@@ -81,7 +81,7 @@ const CategoryLink = ({ title, slug: { current } }: CategoryProps) => {
             <Link
                 href={`/b/category/${current}`}
                 passHref
-                className={`block px-2 py-4 ${styles}`}
+                className={`block px-2 py-4 ${styles} hover:opacity-90`}
             >
                 {title}
             </Link>

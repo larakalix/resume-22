@@ -18,13 +18,14 @@ export const HeaderLink = ({
     const { pathname, push } = useRouter();
 
     const styles = clsx({
-        ["text-v-blue mx-2 dark:bg-white dark:text-black"]:
+        ["text-v-blue mx-2 dark:bg-white dark:text-black hover:opacity-90"]:
             !isOnMobile && pathname === route,
-        ["text-v-gray dark:text-white"]: !isOnMobile && pathname !== route,
+        ["text-v-gray dark:text-white hover:opacity-90"]:
+            !isOnMobile && pathname !== route,
     });
 
     const hlStyles = clsx({
-        ["bg-v-blue text-white"]: highlight,
+        ["bg-v-blue text-white hover:opacity-90"]: highlight,
     });
 
     if (anker && !routeToShow?.includes(pathname)) return null;
