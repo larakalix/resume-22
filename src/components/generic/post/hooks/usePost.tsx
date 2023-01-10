@@ -8,7 +8,7 @@ export const usePost = ({ type }: { type: PostType }) => {
     });
 
     const headStyles = clsx({
-        ["text-[1.2rem] md:text-[2rem] leading-none"]: type === PostType.Common,
+        ["text-[1.4rem] md:text-[2rem] leading-none"]: type === PostType.Common,
         ["text-[1rem]"]: type === PostType.Home,
     });
 

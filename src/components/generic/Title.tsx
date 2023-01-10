@@ -25,7 +25,7 @@ export const Title = ({
             size === TitleSize.big,
         ["font-semibold text-[1rem] md:text-[2.2rem] px-2 md:px-[10rem]"]:
             size === TitleSize.small,
-        ["font-semibold text-[0.8rem] md:text-[1.2rem] px-2 md:px-[6rem]"]:
+        ["font-semibold text-[1rem] md:text-[1.2rem] px-2 md:px-[6rem]"]:
             size === TitleSize.extrasmall,
     });
 
