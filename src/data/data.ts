@@ -73,7 +73,7 @@ export const social_networks: HeaderLinkProps[] = [
     },
     {
         label: "LinkedIn",
-        route: "https://www.linkedin.com/in/ivan-antonio-lara-kalix-88b100106/?lipi=urn%3Ali%3Apage%3Aprofile_common_profile_index%3B6af89260-76cd-4b1a-b490-f5481f5a9c92",
+        route: "https://www.linkedin.com/in/ilaradev/",
         anker: "",
         isOnMobile: false,
         mobileClick: null,
