@@ -1,34 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# turborepo-tailwindcss
 
-## Getting Started
+A sample setup of a Turborepo monorepository with shared Tailwind CSS configurations.
 
-First, run the development server:
+## Installation
 
-```bash
-npm run dev
-# or
-yarn dev
+1. To get this project files locally on your machine, you can clone this repository by running the following command on your terminal or command line:
+
+```sh
+git clone https://github.com/cvrlnolan/turborepo-tailwindcss.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install all the dependency packages found in the `package.json` files across the monorepo apps by running `yarn install` from the project root directory.
+3. To start the development servers of all the applications in your monorepo in parrallel, simply run `yarn dev`. To start an individual app the monorepo, run:
+   `yarn workspace <name> dev` (_name_: is found/set in the package.json for each individual app folder)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Apps & Packages
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- `apps/docs`: a sample documentation [Next.js]() app
+- `apps/web`: a sample web [Next.js]() app
+- `packages/ui`: a stub React component library shared by both `web` and `docs` applications
+- `packages/config`: shared `tailwindcss`, `eslint` configurations (includes `eslint-config-next`, `eslint-config-prettier`, `eslint-plugin-prettier` etc..)
+- `packages/tsconfig`: `tsconfig.json`s which can be used by extending them throughout the monorepo
