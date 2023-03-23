@@ -5,10 +5,9 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx,vue}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "../../packages/ui/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "../../packages/ui/src/*.{html,js,svelte,ts,tsx,svx,astro}",
+    "./src/**/*.{html,js,svelte,ts,tsx,svx,asstro}",
+    "./../../packages/ui/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     fontFamily: {

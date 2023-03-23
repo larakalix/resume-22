@@ -2,13 +2,14 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { Router } from "next/router";
+import Script from "next/script";
 import { AnimatePresence } from "framer-motion";
 import NProgress from "nprogress";
 import { ToastProvider } from "react-toast-notifications";
-import { Footer, Header } from "../src/components";
+import { Header } from "../src/components";
 import ThemeContext from "../src/context/ThemeContext";
 import useTheme from "../src/hooks/useTheme";
-import Script from "next/script";
+import { Footer } from "@ui/kit";
 
 Router.events.on("routeChangeStart", () => NProgress.set(0.5));
 Router.events.on("routeChangeComplete", () => NProgress.done());
