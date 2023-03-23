@@ -15,8 +15,12 @@
     "dev": "tsup --watch",
     "check-types": "tsc --noEmit"
   },
+  "dependencies": {
+    "clsx": "^1.2.1"
+  },
   "peerDependencies": {
-    "react": "^18.2.0"
+    "react": "^18.2.0",
+    "clsx": "^1.2.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

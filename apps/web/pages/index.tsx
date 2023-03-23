@@ -10,8 +10,6 @@ import { HeaderLinkProps } from "../src/interfaces";
 import { HomePageProps } from "../src/interfaces/pages/HomeProps";
 import { HomeScreen } from "../src/pages";
 
-import { Button } from "@ui/kit";
-
 interface Props extends HomePageProps {
   links: HeaderLinkProps[];
   notFound: boolean;
@@ -30,12 +28,6 @@ const Home = ({ skills, posts, projects, notFound }: Props) => {
       <Head>
         <title>Hello stranger!</title>
       </Head>
-
-      <div className="w-full flex justify-center my-10">
-        <Button>
-          <span>Hello stranger 👨‍💻</span>
-        </Button>
-      </div>
 
       <HomeScreen posts={posts} skills={skills} projects={projects} />
     </ContactWrap>
