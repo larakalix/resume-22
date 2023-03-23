@@ -1,3 +1,5 @@
+import { Button } from "ui";
+
 export const Footer = () => {
   return (
     <div className="text-center pt-4 pb-8">
@@ -9,6 +11,9 @@ export const Footer = () => {
         >
           Ivan Lara 👨‍💻 {new Date().getFullYear()}
         </a>
+        <Button>
+          <span>Hello</span>
+        </Button>
       </p>
     </div>
   );
