@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Button } from "ui";
+import { Button } from "@ui/kit";
 
 export default function Docs() {
   return (

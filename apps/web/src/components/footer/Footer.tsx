@@ -1,4 +1,4 @@
-import { Button } from "ui";
+import { Button } from "@ui/kit";
 
 export const Footer = () => {
   return (

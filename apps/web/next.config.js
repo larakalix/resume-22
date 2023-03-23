@@ -10,7 +10,7 @@ const nextConfig = {
   images: {
     domains: ["www.datocms-assets.com", "cdn.sanity.io"],
   },
-  transpilePackages: ["ui"],
+  transpilePackages: ["@ui/kit"],
 };
 
 module.exports = nextConfig;

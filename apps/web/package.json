@@ -33,7 +33,8 @@
     "react-toast-notifications": "^2.5.1",
     "react-youtube": "^9.0.3",
     "styled-components": "^5.3.5",
-    "yup": "^0.32.11"
+    "yup": "^0.32.11",
+    "@ui/kit": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "17.0.23",
@@ -46,7 +47,7 @@
     "postcss": "^8.4.12",
     "tailwindcss": "^3.0.23",
     "typescript": "4.6.3",
-    "config": "*",
-    "tsconfig": "*"
+    "tailwind-config": "workspace:*",
+    "tsconfig": "workspace:*"
   }
 }
