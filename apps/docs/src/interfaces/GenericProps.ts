@@ -1,5 +1,3 @@
-import { HeadingTag } from "../enums";
-
 export interface Child {
   _key: string;
   _type: string;
@@ -13,11 +11,13 @@ export interface GenericTagProps {
   className?: string | undefined;
 }
 
-export interface GenericTagWtTypeProps extends GenericTagProps {
-  type: HeadingTag;
-}
-
 export interface GenericDateProps {
   _createdAt: Date;
   _updatedAt: Date;
 }
+
+export type KitModule = {
+  name: string;
+  description: string;
+  component: React.ReactNode;
+};

@@ -3,13 +3,10 @@ import { motion } from "framer-motion";
 import { div_config } from "../../configs/FramerMotion";
 import { Banner } from "../../components/home/Banner";
 
-import { Button, Title, TitleSize, NeedProject } from "@ui/kit";
-
-type KitModule = {
-  name: string;
-  description: string;
-  component: React.ReactNode;
-};
+import { Button, Title, TitleSize, NeedProject, LetsTalkButton } from "@ui/kit";
+import type { KitModule } from "../../interfaces";
+import { KitList } from "../../components/home/KitList";
+import { KitSelected } from "../../components/home/KitSelected";
 
 const kitModules: KitModule[] = [
   {
@@ -34,6 +31,11 @@ const kitModules: KitModule[] = [
     description: "A contact banner",
     component: <NeedProject />,
   },
+  {
+    name: "LetsTalkButton",
+    description: "A button to contact me",
+    component: <LetsTalkButton inverted={false} />,
+  },
 ];
 
 export const HomeScreen = () => {
@@ -56,31 +58,9 @@ export const HomeScreen = () => {
         className="flex items-center justify-center flex-col w-full m-auto md:max-w-5xl lg:max-w-7xl pt-10 pb-20"
       >
         <div className="flex w-full]">
-          <section className="mx-10 border-v-border border rounded-v-rounded w-full md:w-[30vw] max-w-[22rem">
-            <ul>
-              {kitModules.map((module) => (
-                <li
-                  key={module.name}
-                  className="text-v-gray block px-2 py-4 hover:opacity-90 w-full hover:cursor-pointer text-center"
-                  onClick={() => handleClick(module)}
-                >
-                  {module.name}
-                </li>
-              ))}
-            </ul>
-          </section>
+          <KitList kitModules={kitModules} handleClick={handleClick} />
 
-          <section className="w-full mx-10 flex items-center justify-center flex-col">
-            <Title
-              title={selection.name}
-              inverted={false}
-              size={TitleSize.small}
-            />
-            <p className="text-v-gray mb-8">{selection.description}</p>
-            <>{selection.component}</>
-
-            <div className="text-white mt-12">Form</div>
-          </section>
+          <KitSelected selection={selection} />
         </div>
       </div>
     </motion.div>
