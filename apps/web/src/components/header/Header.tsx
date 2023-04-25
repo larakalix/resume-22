@@ -5,7 +5,6 @@ import clsx from "clsx";
 import { links } from "../../data/data";
 import { Brand } from "./Brand";
 import { ThemeSelector } from "./ThemeSelector";
-import { HeaderLinkProps } from "../../interfaces";
 import { HeaderLink } from "./sibblings/HeaderLink";
 
 import styles from "./styles/Nav.module.css";

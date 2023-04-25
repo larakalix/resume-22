@@ -13,6 +13,7 @@
     "@sanity/image-url": "^1.0.1",
     "@types/nprogress": "^0.2.0",
     "@types/styled-components": "^5.1.26",
+    "@ui/kit": "workspace:*",
     "axios": "^0.27.2",
     "clsx": "^1.2.1",
     "date-fns": "^2.29.2",
@@ -32,9 +33,9 @@
     "react-refractor": "^2.1.7",
     "react-toast-notifications": "^2.5.1",
     "react-youtube": "^9.0.3",
+    "sass": "^1.62.0",
     "styled-components": "^5.3.5",
-    "yup": "^0.32.11",
-    "@ui/kit": "workspace:*"
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@types/node": "17.0.23",
@@ -45,9 +46,9 @@
     "eslint": "8.12.0",
     "eslint-config-next": "^13.0.0",
     "postcss": "^8.4.12",
-    "tailwindcss": "^3.0.23",
-    "typescript": "4.6.3",
     "tailwind-config": "workspace:*",
-    "tsconfig": "workspace:*"
+    "tailwindcss": "^3.0.23",
+    "tsconfig": "workspace:*",
+    "typescript": "4.6.3"
   }
 }

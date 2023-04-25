@@ -24,7 +24,8 @@ module.exports = {
         "v-border": "#333",
         "v-bullet": "#111",
         "v-tag": "#f3f4f6",
-        "v-black": "#090013",
+        "v-black": "#0b0017",
+        "v-dark-purple": "#130f49",
       },
       fontSize: {
         "v-small": "0.875rem",

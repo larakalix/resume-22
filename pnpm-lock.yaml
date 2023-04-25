@@ -165,6 +165,7 @@ importers:
       react-refractor: ^2.1.7
       react-toast-notifications: ^2.5.1
       react-youtube: ^9.0.3
+      sass: ^1.62.0
       styled-components: ^5.3.5
       tailwind-config: workspace:*
       tailwindcss: ^3.0.23
@@ -186,7 +187,7 @@ importers:
       get-youtube-id: 1.0.1
       graphql-request: 4.3.0
       i18next: 21.10.0
-      next: 13.2.4_biqbaboplfbrettd7655fr4n2y
+      next: 13.2.4_krg7tz6h6n3fx3eq7tclunioeu
       nprogress: 0.2.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -196,6 +197,7 @@ importers:
       react-refractor: 2.1.7_react@18.2.0
       react-toast-notifications: 2.5.1_biqbaboplfbrettd7655fr4n2y
       react-youtube: 9.0.3_react@18.2.0
+      sass: 1.62.0
       styled-components: 5.3.9_biqbaboplfbrettd7655fr4n2y
       yup: 0.32.11
     devDependencies:
@@ -4391,21 +4393,6 @@ packages:
         optional: true
     dev: false
 
-  /follow-redirects/1.15.2_debug@2.6.9:
-    resolution:
-      {
-        integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==,
-      }
-    engines: { node: ">=4.0" }
-    peerDependencies:
-      debug: "*"
-    peerDependenciesMeta:
-      debug:
-        optional: true
-    dependencies:
-      debug: 2.6.9
-    dev: false
-
   /for-each/0.3.3:
     resolution:
       {
@@ -4598,7 +4585,7 @@ packages:
       create-error-class: 3.0.2
       debug: 2.6.9
       decompress-response: 6.0.0
-      follow-redirects: 1.15.2_debug@2.6.9
+      follow-redirects: 1.15.2
       form-urlencoded: 2.0.9
       into-stream: 3.1.0
       is-plain-object: 2.0.4
@@ -5135,6 +5122,13 @@ packages:
       }
     engines: { node: ">= 4" }
     dev: true
+
+  /immutable/4.3.0:
+    resolution:
+      {
+        integrity: sha512-0AOCmOip+xgJwEVTQj1EfiDDOkPmuyllDuTuEX+DDXUgapLAsBIfkg3sxCYyCEA8mQqZrrxPUGjcOQ2JS3WLkg==,
+      }
+    dev: false
 
   /import-fresh/3.3.0:
     resolution:
@@ -6882,6 +6876,57 @@ packages:
       - babel-plugin-macros
     dev: false
 
+  /next/13.2.4_krg7tz6h6n3fx3eq7tclunioeu:
+    resolution:
+      {
+        integrity: sha512-g1I30317cThkEpvzfXujf0O4wtaQHtDCLhlivwlTJ885Ld+eOgcz7r3TGQzeU+cSRoNHtD8tsJgzxVdYojFssw==,
+      }
+    engines: { node: ">=14.6.0" }
+    hasBin: true
+    peerDependencies:
+      "@opentelemetry/api": ^1.4.0
+      fibers: ">= 3.1.0"
+      node-sass: ^6.0.0 || ^7.0.0
+      react: ^18.2.0
+      react-dom: ^18.2.0
+      sass: ^1.3.0
+    peerDependenciesMeta:
+      "@opentelemetry/api":
+        optional: true
+      fibers:
+        optional: true
+      node-sass:
+        optional: true
+      sass:
+        optional: true
+    dependencies:
+      "@next/env": 13.2.4
+      "@swc/helpers": 0.4.14
+      caniuse-lite: 1.0.30001469
+      postcss: 8.4.14
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      sass: 1.62.0
+      styled-jsx: 5.1.1_react@18.2.0
+    optionalDependencies:
+      "@next/swc-android-arm-eabi": 13.2.4
+      "@next/swc-android-arm64": 13.2.4
+      "@next/swc-darwin-arm64": 13.2.4
+      "@next/swc-darwin-x64": 13.2.4
+      "@next/swc-freebsd-x64": 13.2.4
+      "@next/swc-linux-arm-gnueabihf": 13.2.4
+      "@next/swc-linux-arm64-gnu": 13.2.4
+      "@next/swc-linux-arm64-musl": 13.2.4
+      "@next/swc-linux-x64-gnu": 13.2.4
+      "@next/swc-linux-x64-musl": 13.2.4
+      "@next/swc-win32-arm64-msvc": 13.2.4
+      "@next/swc-win32-ia32-msvc": 13.2.4
+      "@next/swc-win32-x64-msvc": 13.2.4
+    transitivePeerDependencies:
+      - "@babel/core"
+      - babel-plugin-macros
+    dev: false
+
   /nlcst-to-string/3.1.1:
     resolution:
       {
@@ -8301,6 +8346,19 @@ packages:
       }
     dependencies:
       suf-log: 2.5.3
+    dev: false
+
+  /sass/1.62.0:
+    resolution:
+      {
+        integrity: sha512-Q4USplo4pLYgCi+XlipZCWUQz5pkg/ruSSgJ0WRDSb/+3z9tXUOkQ7QPYn4XrhZKYAK4HlpaQecRwKLJX6+DBg==,
+      }
+    engines: { node: ">=14.0.0" }
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.3
+      immutable: 4.3.0
+      source-map-js: 1.0.2
     dev: false
 
   /sax/1.2.4:
