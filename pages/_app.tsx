@@ -56,7 +56,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                         <meta property="og:type" content="website" />
                         <meta
                             property="og:title"
-                            content="Fullstack Developer based in Nicaragua"
+                            content="Fullstack Developer based in Florida"
                         />
                         <meta
                             property="og:description"
