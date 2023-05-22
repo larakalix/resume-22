@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { RiGithubFill, RiLinkM } from "react-icons/ri";
+import { IoIosArrowRoundForward } from "react-icons/io";
 import { urlFor } from "../../../sanity/builder";
 import { HomePageProps, ProjectProps } from "../../interfaces";
 import { Title } from "../generic";
@@ -47,15 +47,16 @@ const Project = ({ name, link, github, banner }: ProjectProps) => {
                 />
             </div>
 
-            <ul className="flex justify-start items-center space-x-4">
+            <ul className="flex justify-between items-center space-x-4">
                 <li className="my-4 md:my-0">
                     <a
                         href={link}
                         target="_blank"
                         rel="noreferrer"
-                        className="flex items-center justify-center w-[4rem] h-[4rem] bg-blue-500 text-white min-h-[4rem] rounded-v-rounded hover:opacity-90"
+                        className="flex items-center justify-center h-[4rem] text-white min-h-[4rem] rounded-v-rounded hover:opacity-90 cursor-pointer"
                     >
-                        <RiLinkM className="text-[1.8rem]" />
+                        Go to link{" "}
+                        <IoIosArrowRoundForward className="text-[1.4rem] ml-4" />
                     </a>
                 </li>
                 {github && (
@@ -64,9 +65,10 @@ const Project = ({ name, link, github, banner }: ProjectProps) => {
                             href={github}
                             target="_blank"
                             rel="noreferrer"
-                            className="flex items-center justify-center w-[4rem] h-[4rem] bg-black text-white text-xl min-h-[4rem] rounded-v-rounded invert hover:opacity-90"
+                            className="flex items-center justify-center h-[4rem] text-white min-h-[4rem] rounded-v-rounded hover:opacity-90 cursor-pointer"
                         >
-                            <RiGithubFill className="text-white text-[1.8rem]" />
+                            Go to repo{" "}
+                            <IoIosArrowRoundForward className="text-[1.4rem] ml-4" />
                         </a>
                     </li>
                 )}

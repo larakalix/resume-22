@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { Router } from "next/router";
+import { Router, useRouter } from "next/router";
 import { AnimatePresence } from "framer-motion";
 import NProgress from "nprogress";
 import { ToastProvider } from "react-toast-notifications";
@@ -18,7 +18,10 @@ NProgress.configure({ showSpinner: false });
 
 const { Provider } = ThemeContext;
 
+const disableFrom = ["/cv"];
+
 function MyApp({ Component, pageProps }: AppProps) {
+    const router = useRouter();
     const { links, theme, changeTheme } = useTheme();
 
     return (
@@ -71,11 +74,13 @@ function MyApp({ Component, pageProps }: AppProps) {
                     </Head>
 
                     <div className="bg-gray-100 dark:bg-v-black scroll-smooth transition-colors">
-                        <Header />
+                        {!disableFrom.includes(router.pathname) && <Header />}
+
                         <AnimatePresence exitBeforeEnter>
                             <Component {...pageProps} />
                         </AnimatePresence>
-                        <Footer />
+
+                        {!disableFrom.includes(router.pathname) && <Footer />}
                     </div>
                 </div>
             </Provider>

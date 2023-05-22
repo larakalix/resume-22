@@ -22,7 +22,7 @@ module.exports = {
                 "v-border": "#333",
                 "v-bullet": "#111",
                 "v-tag": "#f3f4f6",
-                "v-black": "#090013",
+                "v-black": "#0c0c0c",
             },
             fontSize: {
                 "v-small": "0.875rem",
