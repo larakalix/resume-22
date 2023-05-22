@@ -32,7 +32,11 @@ export const CvHeader = ({
                         <li>{location}</li>
                         <li>{phone}</li>
                         <li>
-                            <a href={`https://${website}`} target="_blank">
+                            <a
+                                href={`https://${website}`}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
                                 {website}
                             </a>
                         </li>
