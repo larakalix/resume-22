@@ -32,6 +32,7 @@
     "react-refractor": "^2.1.7",
     "react-toast-notifications": "^2.5.1",
     "react-youtube": "^9.0.3",
+    "sass": "^1.62.1",
     "styled-components": "^5.3.5",
     "yup": "^0.32.11"
   },

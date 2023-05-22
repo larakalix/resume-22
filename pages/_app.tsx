@@ -1,14 +1,15 @@
 import "../styles/globals.css";
-import type { AppProps } from "next/app";
 import Head from "next/head";
 import { Router, useRouter } from "next/router";
 import { AnimatePresence } from "framer-motion";
 import NProgress from "nprogress";
-import { ToastProvider } from "react-toast-notifications";
 import { Footer, Header } from "../src/components";
 import ThemeContext from "../src/context/ThemeContext";
 import useTheme from "../src/hooks/useTheme";
 import Script from "next/script";
+
+import App from "next/app";
+import type { AppProps, AppContext } from "next/app";
 
 Router.events.on("routeChangeStart", () => NProgress.set(0.5));
 Router.events.on("routeChangeComplete", () => NProgress.done());
@@ -20,12 +21,16 @@ const { Provider } = ThemeContext;
 
 const disableFrom = ["/cv"];
 
-function MyApp({ Component, pageProps }: AppProps) {
+type TProps = Pick<AppProps, "Component" | "pageProps"> & {
+    title: string;
+};
+
+function MyApp({ Component, pageProps, title }: TProps) {
     const router = useRouter();
     const { links, theme, changeTheme } = useTheme();
 
     return (
-        <ToastProvider>
+        <>
             <Provider
                 value={{
                     links,
@@ -57,10 +62,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                             content="https://www.kalixthedev.com"
                         />
                         <meta property="og:type" content="website" />
-                        <meta
-                            property="og:title"
-                            content="Fullstack Developer based in Florida"
-                        />
+                        <meta property="og:title" content={title} />
                         <meta
                             property="og:description"
                             content="I'm Ivan Lara, I build digital products based on your business needs."
@@ -84,8 +86,14 @@ function MyApp({ Component, pageProps }: AppProps) {
                     </div>
                 </div>
             </Provider>
-        </ToastProvider>
+        </>
     );
 }
+
+MyApp.getInitialProps = async (context: AppContext) => {
+    const ctx = await App.getInitialProps(context);
+
+    return { ...ctx, title: "Fullstack Developer based in Florida" };
+};
 
 export default MyApp;
