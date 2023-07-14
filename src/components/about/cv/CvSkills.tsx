@@ -10,7 +10,8 @@ const content = {
                 "HTML",
                 "CSS (SASS, TailwindCSS, BulmaCSS)",
                 "Angular",
-                "React.js (NextJS, GatsbyJS, Astro)",
+                "React.js (Next.js, Gatsby.js, Astro)",
+                "TypeScript",
             ],
         },
         {
@@ -19,7 +20,8 @@ const content = {
                 ".NET (Core, NET6)",
                 ".NET Entity Framework",
                 "SQL (MSSQL, PostgresSQL)",
-                "NodeJS (NestJS)",
+                "Node.js (Nest.js)",
+                "TypeScript",
             ],
         },
         {
@@ -28,12 +30,13 @@ const content = {
                 "VS Code",
                 "Git (Github, Gitlab)",
                 "DevOps (Azure)",
+                "Firebase",
                 "Figma",
             ],
         },
         {
             title: "Mobile",
-            skills: ["React Native", "Flutter"],
+            skills: ["React Native", "Flutter", "TypeScript"],
         },
     ],
     education: [
@@ -60,8 +63,8 @@ export const CvSkills = () => {
 
                 <div className="flex flex-col gap-4 text-[.8rem] text-v-black dark:text-white">
                     <p>
-                        With over 7 years of expertise, I&apos;m a Fullstack
-                        Developer, with a massive passion for coding, in order
+                        With over 7 years of expertise, I&apos;m a full-stack
+                        developer, with a massive passion for coding, in order
                         to perform user experience. I can help you to reach your
                         goals, by providing a high-quality product developing
                         your ideas.

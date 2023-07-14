@@ -10,13 +10,13 @@ export const CvExpertise = () => {
             <div className="flex flex-col gap-4">
                 <ExpertiseSquare
                     title="NOVATECH | JavaScript Frontend Dev"
-                    place="El Salvador/ Jan 2022 - May 2022"
+                    place="El Salvador/ Jan 2022 - May 2023"
                     skills={[
-                        "Frontend: Angular ReactJS, NextJS, Strapi",
-                        "Tools: Azure DevOps, Figma, Git",
+                        "Frontend: Angular, React.js, Next.js, TypeScript, Strapi",
+                        "Tools: Azure DevOps, Firebase, Figma, Git",
                     ]}
                     brief={[
-                        "During this positon, I've worked the company website, improving the final user experience and adding new features to the landing pages, using NextJS and Strapi, the project achieved a better score on Google Lighthouse.",
+                        "During this positon, I've worked the company website, improving the final user experience and adding new features to the landing pages, using Next.js and Strapi, the project achieved a better score on Google Lighthouse.",
                         "Algo have been working on a new dashboard for Unicomer, to handle user payment services in a better way with a cleanest UI",
                     ]}
                 />
@@ -25,11 +25,11 @@ export const CvExpertise = () => {
                     title="STEFANINI | JavaScript Frontend Dev"
                     place="El Salvador/ Feb 2022 - April 2022"
                     skills={[
-                        "Frontend: ReactJS, Redux",
+                        "Frontend: React.js, TypeScript, Redux",
                         "Tools: Jira, Confluence, Git",
                     ]}
                     brief={[
-                        "During this position, I developed new features to help users to manange their data in a better way, using clean UI views to handle business logic, and reduce loading times.",
+                        "During this position, I developed new features to help users to manage their data in a better way, using clean UI views to handle business logic, and reduce loading times.",
                         "The project is currently using a java backend service, so my work was create new features to consume data from new endpoints, and develop final user views for them to get an easier experience because of the data complexity that they need to handle.",
                     ]}
                 />
@@ -38,7 +38,7 @@ export const CvExpertise = () => {
                     title="HYPERNOVA LABS| Backend Dev"
                     place="Panama / Feb 2021- Jan 2022"
                     skills={[
-                        "Frontend: Angular, ReactJS",
+                        "Frontend: Angular, React.js, TypeScript",
                         "Backend: .NET Core, MS SQL Server, NodeJS, MongoDB, EF Core",
                         "Tools: Azure DevOps, Git",
                     ]}
@@ -52,10 +52,10 @@ export const CvExpertise = () => {
                     title="GO DIGITAL GROUP | Fullstack Dev"
                     place="Panama / Dec 2018 - 2021"
                     skills={[
-                        "Frontend: Angular, Bootstrap 4, Bulma",
-                        "Mobile: Ionic",
+                        "Frontend: Angular, React.js, TypeScript, Bootstrap 4, Bulma",
+                        "Mobile: Ionic, TypeScript",
                         "Backend: .NET Core, MS SQL Server, EF Core",
-                        "Tools: Asana, Git, Docker",
+                        "Tools: Asana, Git, Firebase, Docker",
                     ]}
                     brief={[
                         "During this position, I've worked in a loyalty program from scratch, in order to let stores to create dynamic storefronts or manage their loyalty program using a DnD builder to create their landing pages.",
@@ -67,7 +67,7 @@ export const CvExpertise = () => {
                     title="ONLINE | Backend Dev / IT Website Production Area Coordinator / Web Designer"
                     place="Nicaragua / May 2016 - Oct 2018"
                     skills={[
-                        "Web Design: HTML5, CSS3, JS, jQuery, Razor, Bootstrap 3",
+                        "Web Design: HTML5, CSS3, JavaScript, jQuery, Razor, Bootstrap 3",
                         "Backend: .NET Framework, MS SQL, .NET ADO",
                     ]}
                     brief={[
