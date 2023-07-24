@@ -7,10 +7,10 @@ import { CvExpertise } from "../../components/about/cv/CvExpertise";
 const headerInfo = {
     name: "Ivan Lara",
     title: "Full-stack Developer",
-    location: "Managua, Nicaragua",
+    location: "Plantation, Florida",
     phone: "+1 (954) 872 8450",
     email: "uki@live.co.uk",
-    website: "www.kalixthedev.com/projects",
+    website: "www.kalixthedev.com",
 };
 
 export const CvScreen = () => {
